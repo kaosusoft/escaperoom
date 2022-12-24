@@ -1,0 +1,117 @@
+@charset "euc-kr";
+/***************************************************
+	서브페이지 스타일시트
+	* 작성업체: (주)위눌 웹 에이전시
+***************************************************/
+
+table.admin_list {width:99%;padding:2px;margin-top:36px; border-collapse: collapse;}
+table.admin_list tr {padding: 2px 0 ; border-bottom:solid 1px #e7e8e7; }
+table.admin_list tr th {padding:10px;font-size:13px;text-align:center;background:#9f9bb4;color:#fff;text-align:center;border:1px solid #ddd;}
+table.admin_list tr td {padding:10px;text-align:center;font-size:12px;background:#fff;border:1px solid #ddd; }
+table.admin_list tr td img { width:100%; }
+table.admin_list tr td.a_left {padding:10px;font-size:12px;text-align:left;background:#ffffff;}
+table.admin_list tr td.a_left div.demo{float:right;}
+table.admin_list tr td.a_center {padding: 10px;background:#fff;font-size:12px;text-align:center; border:1px solid #ddd; }
+
+table.sub_list {width:100%;padding:2px;margin-top:36px; }
+table.sub_list tr {padding: 12px 0 12px 0;}
+table.sub_list tr th {padding: 10px 0 10px 0;background:#94b17b;color:#fff;font-size:18px;text-align:center;border-top:1px solid #ddd;border-left:1px solid #ddd;border-right:1px solid #ddd;}
+table.sub_list tr td {padding: 10px 0 10px 0;background:#fff;font-size:15px;text-align:center;border-bottom:1px solid #ddd;border-left:1px solid #ddd;border-right:1px solid #ddd;}
+table.sub_list tr td.a_left {padding-left:10px;text-align:left;background:#ffffff;border-bottom:1px solid #ddd;border-left:1px solid #ddd;border-right:1px solid #ddd;}
+table.sub_list tr td.a_left div.demo{float:right;}
+table.sub_list tr td.a_center {text-align:center; padding-left:10px;background:#ffffff;}
+
+table.board_list {width:100%;margin-top:2px; }
+table.board_list tr {padding: 2px 0 2px 0;}
+table.board_list tr th { padding:7px 0 7px 0;/*background:#f6f6f6;*/color:#222; font-size:13px;text-align:center; border-top:1px solid #222; border-top:1px solid #999; }
+table.board_list tr td { padding:4px 0 4px 0;background:#fff;font-size:13px;text-align:center;border-bottom:1px solid #f6f6f6; }
+table.board_list tr td.a_left { padding:4px 0 4px 0;text-align:left;font-size:13px;}
+table.board_list tr td.a_left div.demo{float:right;}
+table.board_list tr td.a_center {text-align:center; padding-left:10px;background:#ffffff;}
+
+table.ssub_list {width:100%;padding:2px;margin-top:36px; }
+table.ssub_list tr {padding: 4px 0 4px 0;}
+table.ssub_list tr th {padding: 10px 0 10px 0;background:#94b17b;color:#fff;font-size:13px;text-align:center;border-top:1px solid #ddd;border-left:1px solid #ddd;border-right:1px solid #ddd;}
+table.ssub_list tr td {padding: 10px 0 10px 0;background:#fff;font-size:13px;text-align:center;border-top:1px solid #ddd;}
+table.ssub_list tr td.a_left {padding-left: 20px;text-align:left;font-size:13px;background:#ffffff;border-top:1px solid #ddd;}
+table.ssub_list tr td.a_left div.demo{float:right;}
+table.ssub_list tr td.a_center {text-align:center; padding-left:10px;background:#ffffff;}
+
+table.spv_list {width:99%;padding:2px;margin-top:20px; border-collapse: collapse;}
+table.spv_list tr {padding: 2px 0; border-bottom:solid 1px #e7e8e7; }
+table.spv_list tr th {padding:10px;font-size:15px;text-align:center;background:#9f9bb4;color:#fff;text-align:center;border:1px solid #ddd;}
+table.spv_list tr td {padding:10px;text-align:center;font-size:13px;border:1px solid #ddd; }
+table.spv_list tr td img { width:100%; }
+table.spv_list tr td.a_left {padding:10px;font-size:13px;text-align:left;}
+table.spv_list tr td.a_left div.demo{float:right;}
+table.spv_list tr td.a_center {padding: 10px;font-size:13px;text-align:center; border:1px solid #ddd; }
+
+table.sspv_list {width:99%;padding:2px;margin-top:10px; border-collapse: collapse;}
+table.sspv_list tr {padding:2px 0 ; }
+table.sspv_list tr th {padding: 10px 0px 0px ! important; font-size:18px;text-align:center; /*background:#9f9bb4;*/color:#333;text-align:left; height:40px}
+table.sspv_list tr td {padding:2px 0;text-align:center;font-size:13px;background:#fff;}
+table.sspv_list tr td img { width:100%; }
+table.sspv_list tr td.a_left {padding:2px;font-size:13px;text-align:left;background:#ffffff;}
+table.sspv_list tr td.a_left div.demo{float:right;}
+table.sspv_list tr td.a_center {padding:2px;background:#fff;font-size:13px;text-align:center; }
+
+table.input_list {width:99%;padding:2px;margin-top:20px; border-collapse: collapse;}
+table.input_list tr {padding: 2px 0 ; border-bottom:solid 1px #e7e8e7; }
+table.input_list tr th { padding:18px;font-size:15px;text-align:left;background:#f6f6f6;color:#222; vertical-align:middle; text-align:left;border:1px solid #ddd;}
+table.input_list tr th:first-child{ text-align:center; }
+table.input_list tr td:first-child{ text-align:center; }
+table.input_list tr td { padding:18px;font-size:14px;background:#fff;text-align:left;border:1px solid #ddd; }
+table.input_list tr td img { width:100%; }
+table.input_list tr td.a_left {padding:10px;font-size:13px;text-align:left;background:#ffffff;}
+table.input_list tr td.a_left .radio_cs{ width: 60px; float: left; height: 30px; line-height: 32px; }
+table.input_list tr td.a_left div.demo{float:right;}
+table.input_list tr td.a_center {padding: 10px;background:#fff;font-size:13px;text-align:center; border:1px solid #ddd; }
+
+/*
+table.in_list {width:99%;padding:2px;margin-top:2px; border-collapse: collapse;}
+table.in_list tr {padding:3px 0 ; }
+table.in_list tr th { padding:8px;font-size:15px;text-align:center;background:#f6f6f6;color:#222;text-align:left;}
+table.in_list tr td { padding:8px;font-size:13px;background:#fff;text-align:left;}
+table.in_list tr td img { width:100%; }
+table.in_list tr td.a_left {padding:8px;font-size:13px;text-align:center;background:#ffffff;}
+table.in_list tr td.a_left div.demo{float:right;}
+table.in_list tr td.a_center {padding:8px;background:#fff;font-size:13px;text-align:center;}
+
+table.sub_write {width:98%;padding:2px;margin-top:12px; border-collapse: collapse;}
+table.sub_write tr {padding: 2px 0 ; border-bottom:solid 1px #eee; }
+table.sub_write tr th { padding: 10px;font-size:13px; text-align:left; background:#f6f6f6;}
+table.sub_write tr td { padding: 10px;background:#fff;font-size:13px;}
+table.sub_write tr td.a_left {padding: 10px;text-align:left;font-size:13px;background:#ffffff;font-size:14px;}
+*/
+
+table.sp_list {width:99%;padding:2px;margin-top:36px; border-collapse: collapse;}
+table.sp_list tr {padding: 2px 0 ; border-bottom:solid 1px #e7e8e7; }
+table.sp_list tr th {padding: 10px;font-size:12px;text-align:center;border:1px solid #e7e8e7;}
+table.sp_list tr td {padding: 10px;background:#fff;font-size:12px;text-align:left; border:1px solid #ddd; }
+table.sp_list tr td.a_left {padding: 10px;text-align:left;background:#ffffff;}
+table.sp_list tr td.a_left div.demo{float:right;}
+table.sp_list tr td.a_center {text-align:center; padding-left:10px;background:#ffffff;}
+
+table.shop_list {width:100%;padding:1px;margin-top:36px; border-collapse: collapse;}
+table.shop_list tr {padding: 2px 0 ; }
+table.shop_list tr th { padding:10px;font-size:12px;text-align:center;}
+table.shop_list tr td { padding:10px;background:#fff;font-size:13px;text-align:left;/* border:1px solid #ddd; */}
+table.shop_list tr td.a_left { padding: 10px;text-align:left;font-size:12px;background:#ffffff;}
+table.shop_list tr td.a_left div.demo{float:right;}
+table.shop_list tr td.a_center {text-align:center; padding-left:10px;background:#ffffff;}
+
+table.shop_list tr td.r_list ul li {float:left; padding: 5px 0; }
+table.shop_list tr td.r_list ul li:nth-child(2n){width:80%; color:#222;}
+table.shop_list tr td.r_list ul li:nth-child(odd){width:20%; color:#aaa;}
+
+table.ad_list {width:96%;padding:4px;margin:2px auto;border-collapse:collapse;}
+table.ad_list tr {padding:4px 0; border-bottom:solid 1px #e7e8e7; }
+table.ad_list tr th {padding:4px;font-size:13px;text-align:center;background:#fafafa;text-align:center;border:1px solid #ddd;}
+table.ad_list tr td {padding:4px;text-align:center;font-size:12px;background:#fff;border:1px solid #ddd; }
+table.ad_list tr td img { width:100%; }
+table.ad_list tr td.a_left {padding:4px;font-size:12px;text-align:left;background:#ffffff;}
+table.ad_list tr td.a_left div.demo{float:right;}
+table.ad_list tr td.a_center {padding:4px;background:#fff;font-size:12px;text-align:center; border:1px solid #ddd; }
+table.ad_list tr td.a_right {padding:4px;font-size:12px;text-align:right;background:#ffffff;}
+
+

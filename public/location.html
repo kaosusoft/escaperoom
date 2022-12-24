@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>인사이드 방탈출카페 Inside Room</title>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> -->
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<!-- <meta name="naver-site-verification" content="a4c7c0b74939e544079a2e543653493a4628754a"/> -->
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/js/jquery-1.7.1.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/css/import.css" />
+	<link rel="stylesheet" type="text/css" href="/css/location.css" />
+
+	<script type="text/javascript" src="/js/include.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="/js/slick.min.js"></script>
+	<script type="text/javascript" src="/js/ScrollTrigger.min.js"></script>
+	<script type="text/javascript" src="/js/modernizr.js"></script>
+
+	<style>
+		div#header div#wrap2 {
+			display: none;
+		}
+
+		div#m_header div#m_wrap2 {
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			if (Modernizr.touch) {
+				// handle the adding of hover class when clicked
+				$(".img").click(function (e) {
+					if (!$(this).hasClass("hover")) {
+						$(this).addClass("hover");
+					}else{
+						$(this).removeClass("hover");
+					}
+				});
+			} else {
+				// handle the mouseenter functionality
+				$(".img").mouseenter(function () {
+					$(this).addClass("hover");
+				})
+					// handle the mouseleave functionality
+					.mouseleave(function () {
+						$(this).removeClass("hover");
+					});
+			}
+
+			$("#screen_black").css({ 'top': '59px', 'height': $(document).height() - 59 });
+			$("#m_header ul.menu").hide();
+			$("#m_header .m_menu").click(function () {
+				alert("AA");
+				$("ul.menu").show();
+			});
+			$("ul.menu li a.close").click(function () {
+				$("ul.menu").hide();
+			});
+			$(".h_cont ul.sub").hide();
+			$(".h_cont ul.menu li").click(function () {
+				$("ul", this).slideToggle("fast");
+			});
+			$(".personal").hide();
+			$(".div_agree_view").click(function(){
+				$(".personal").show();
+			});
+			$(".person_exit").click(function(){
+				$(".personal").hide();
+			});
+
+			var han_contpom = $("#m_header").offset();
+			$(window).scroll(function () {
+				if ($(document).scrollTop() > han_contpom.top) {
+					$("#m_header").css("position", "fixed");
+					$("#m_header").css("top", "0");
+					$("#m_header").css("z-index", "999");
+					$("#m_wrap1").hide();
+					$("#m_wrap2").show();
+				} else {
+					// $("#m_header").css("position","fixed"); 
+					//$("#m_header").css("top","0");
+					$("#m_wrap1").show();
+					$("#m_wrap2").hide();
+				}
+			});
+		});
+		$(function () {
+			var han_contpos = $("#header").offset().top;
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > han_contpos) {
+					$("#header").css("position", "fixed");
+					$("#header").css("top", "0");
+					$("#wrap1").hide();
+					$("#wrap2").show();
+				} else {
+					$("#header").css("top", "0");
+					$("#wrap1").show();
+					$("#wrap2").hide();
+				}
+			});
+		});
+		function pop_center(url, w, h, tb, st, di, mb, sb, re) {
+			var position = "width=" + w + ",height=" + h + ",left=" + ((screen.width - w) / 2) + ",top=" + ((screen.height - h) / 2) + ",toolbar=" + tb + ",directories=" + di + ",status=" + st + ",menubar=" + mb + ",scrollbars=" + sb + ",resizable=" + re + "";
+			window.open(url, '', position);
+		}
+
+		function start(num) {
+			if (num == 1) {
+				document.getElementById("popup").style.display = "block";
+			}
+			else if (num == 2) {
+				document.getElementById("popup").style.display = "none";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="header">
+		<div id="wrap1">
+			<div class="h_cont1">
+				<h1><a href="/"><img src="/images/common/logo_han.png" class="logo" alt="로고" /></a></h1>
+				<ul class="nav">
+					<li><a href="/location">오시는길</a></li>
+					<li><a href="/confirm">예약확인&#47;취소</a></li>
+					<li><a href="/reserve">예약하기</a></li>
+					<li><a href="/">테마소개</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div style="clear: both"></div>
+		<div id="wrap2">
+			<div class="h_cont2">
+				<h1><a href="/"><img src="/images/common/logo_han.png" class="logo" alt="로고" /></a></h1>
+				<ul class="nav">
+					<li><a href="/location">오시는길</a></li>
+					<li><a href="/confirm">예약확인&#47;취소</a></li>
+					<li><a href="/reserve">예약하기</a></li>
+					<li><a href="/">테마소개</a></li>
+				</ul>
+			</div>
+		</div>
+		<div style="clear: both"></div>
+	</div>
+	<!--// h_cont1 -->
+	<div style="clear: both"></div>
+
+	<div id="m_header">
+		<div id="m_wrap1">
+			<a href="/"><img src="/images/common/logo_han.png" class="logo" alt="로고" /></a>
+			<a href="#/" class="to_nav"><img src="/images/common/menu_w.png" style="width:30px" alt="메뉴" /></a>
+			<div id="nav_wrap">
+				<ul class="nav">
+					<li><a href="/">테마소개</a></li>
+					<li><a href="/reserve">예약하기</a></li>
+					<li><a href="/confirm">예약확인&#47;취소</a></li>
+					<li><a href="/location">오시는길</a></li>
+					<div style="clear: both"></div>
+				</ul>
+			</div>
+		</div>
+
+		<div style="clear: both"></div>
+
+		<div id="m_wrap2">
+			<a href="/"><img src="/images/common/logo_han.png" class="logo" alt="로고" /></a>
+			<a href="#/" class="to_nav"><img src="/images/common/menu_w.png" style="width:30px" alt="메뉴" /></a>
+			<div id="nav_wrap">
+				<ul class="nav">
+					<li><a href="/">테마소개</a></li>
+					<li><a href="/reserve">예약하기</a></li>
+					<li><a href="/confirm">예약확인&#47;취소</a></li>
+					<li><a href="/location">오시는길</a></li>
+					<div style="clear: both"></div>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="screen_black"></div>
+	<script>
+		window.counter = function () {
+			// this refers to the html element with the data-scroll-showCallback tag
+			var span = this.querySelector('span');
+			var current = parseInt(span.textContent);
+
+			span.textContent = current + 1;
+		};
+
+		document.addEventListener('DOMContentLoaded', function () {
+			var trigger = new ScrollTrigger({
+				addHeight: true
+			});
+		});
+	</script>
+
+	<div id="contents">
+		<div class="box1">
+			<h2>오시는 길</h2>
+			<div class="Lbline"></div><br />
+			<h6>인사이드 방탈출은 일산 라페스타 먹자거리에 있습니다.<br />
+			문의사항이 있으시면 연락주세요.</h6>
+			<h4>Tel : 031 - 915- 2077</h4>
+			<!-- <h4>Mobile : 010 - 6386 - 1357</h4> -->
+		</div>
+		<div class="divCome">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1878.026889795152!2d126.7661062281869!3d37.66208190924477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c855b4116eaad%3A0xb2eaa2bc2c1ff56c!2z7IWc66Gd7ZmI7KaI7J287IKw7KCQ!5e0!3m2!1sko!2skr!4v1635351441113!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			<h6><br/>도로명 주소<br/>
+			경기도 고양시 일산동구 무궁화로 25-3, 302호<br /><br />
+			지번 주소<br />
+			경기도 고양시 일산동구 장항2동 741-3, 302호<br />(이레21투빌딩)</h6>
+			<div style="clear: both"></div>
+		</div>
+		<div class="box2">
+			<h2>주차안내</h2>
+			<div class="Lbline"></div><br />
+			<h6>본 매장 건물 지하주차장이 있습니다.<br />
+			자리가 협소할 수 있음을 양해 바랍니다.</h6>
+		</div>
+		<div class="divPark">
+			<figure class="image_wrapper">
+				<img class="img_park" src="/images/main/park.jpg">
+			</figure>
+		</div>
+	</div>
+	<!-- <div id="mask"></div> -->
+	<div id="footer">
+		<div id="wrap">
+			<div class="f_left">
+				<img src="/images/common/logo_w.png" class="logo" alt="로고" /><br />
+				<h1>인사이드 방탈출카페</h1>
+				<div class="Wbline"></div>
+				<br />
+				<h3>
+					대표 김광수 <br />
+					사업자등록번호 121-69-53572<br />
+					사업장주소 경기도 고양시 일산동구 무궁화로 25-3, 3층 302, 303호<br />
+					(장항동, 이레21투빌딩)<br /><br />
+				</h3>
+			</div>
+			<div class="f_right">
+				<ul class="co">
+					<li>
+						<h1>고객센터</h1>
+						<div class="Wbline"></div>
+						<h4>이용 / 예약안내 :  <br />
+							Tel : (031) 915 - 2077 <br />
+							<!-- Mob : 010 - 6386 - 1357 <br /> -->
+						</h4>
+						<h4>운영시간(입장시간) : <br />
+						(월-금) 12:00 ~ 21:30 <br />
+						(토-일) 11:00 ~ 22:30
+						</h4>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div style="clear: both"></div>
+	</div>
+	<!--// footer -->
+</body>
+
+</html>

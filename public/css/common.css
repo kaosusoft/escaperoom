@@ -1,0 +1,121 @@
+@charset "euc-kr";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css'); 
+@import url('//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@font-face {
+	font-family:"Open Sans";
+	src:local("Open Sans"), /* computer */
+		url("/font/OpenSans-regular.eot"), /* IE9 Compat Modes */
+		url("/font/OpenSans-regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		url("https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bbck.woff2") format("woff2"), /* Modern Browsers */
+		/*url("/font/OpenSans-regular.woff2") format("woff2"),  Modern Browsers /
+		url("/font/OpenSans-regular.woff") format("woff"), /* Modern Browsers */
+		url("/font/OpenSans-regular.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+* { font-family: 'Noto Sans KR', 'Nanum Square','Open Sans';}
+dl,ul,ol,menu,li { list-style:none;}
+ul:after {display: block; clear: both; content: '';}
+a {	color:#222;	text-decoration:none; cursor:pointer; }
+a:active, a:hover { color:#222; text-decoration:none; }
+
+.Lbline {display:inline-block; width:80%; height:4px; margin-top:15px ! important; border-bottom:2px solid #333; }
+.Wbline {display:inline-block; width:100%; height:4px; ; border-bottom:2px solid #ddd; }
+
+#screen_black { position: absolute; display: none; width: 100%; height: 100%; z-index: 40; background: rgba(0, 0, 0, 0.4); }
+.logo {height:40px;}
+
+/*  Mobile */
+@media (max-width:1023px){
+    #header { display:none; }
+    #m_header {display: block; position:absolute; top:0; left:0; width:100%; z-index:50; background:transparent; }
+
+    #m_wrap1 { position:fixed; top:0; left:0; width:100%;padding:10px 0;z-index:999; background:#353535;} 
+    #m_wrap2 { position:fixed; top:0; left:0; width:100%;padding:10px 0;z-index:999;background:#353535;} 
+
+    #m_header img{ margin:0 auto; display:block; z-index: 999; }
+    #m_header .to_nav { position:absolute;display:block; width:40px;top:22%; right:8px; z-index:999; }
+    
+    #nav_wrap { position:fixed; -webkit-postion:fixed; display: none; top: 60px; right: 0; width: 50%; height:auto !important; z-index:999; background: #333; box-shadow: 1px 0 3px rgba(0, 0, 0, 0.4); overflow: auto; padding: 10px; }
+    #nav_wrap .nav li { width:100%; }
+    #nav_wrap .nav li a { display: block; width: 95%; padding-left: 5%; height: 60px; line-height: 60px; text-decoration: none; color: white; white-space: nowrap; font-size: 1rem;}
+
+    #footer{ width:100%; border-top:1px solid #ddd; background:#353535; text-align: center;}
+    #footer #wrap{display: inline-block; width:80%; position:relative; padding:10px; overflow: hidden; text-align:left; }
+    #footer #wrap .Wbline {width: 70%;}
+    .f_left { float:left; width:100%; padding:10px; }
+    .f_left img { margin-bottom: 20px;}
+
+    .f_right { float:left; width:100%; padding:10px; }
+    .f_right ul.co { width:100%; /*padding:8px;*/ text-align:left; padding-inline-start: 0px;}
+    .f_right ul.co li a {width:100%; color:#fff; font-size:11.5px;}
+    .f_right ul.co li { margin:8px auto; }
+    .f_right ul.co li:last-child{ margin:0 auto; }
+
+    #wrap h1 { padding-top:2px;text-align:left; font-size:16px; letter-spacing:1px; color:#fff;line-height:24px; -webkit-font-smoothing: subpixel-antialiased; }
+    #wrap h2 { padding-top:2px;text-align:left; font-size:12px; letter-spacing:1px; color:#fff;line-height:18px; -webkit-font-smoothing: subpixel-antialiased; }
+    #wrap h3 { padding-top:2px;text-align:left; font-size:12px; letter-spacing:1px; color:#b7b7b7; }
+    #wrap h4 { padding-top:10px;text-align:left; font-size:18px; letter-spacing:1px;  color:#fff;line-height:24px; -webkit-font-smoothing: subpixel-antialiased; }
+}
+
+/*  PC */
+@media (min-width:1024px){
+    #m_header { display:none; }
+    #header { position:absolute; top:0; left:0; width:100%; z-index:50; background:transparent; }
+
+    #wrap1 { width:100%; background:#353535; }
+    .h_cont1 { position:relative; width:75%; height:60px; margin: 0 auto; }
+    .h_cont1 h1 {display: inline-block; width:150px; height:100%; left:10%;}
+    .h_cont1 h1 a img {position:absolute; margin:auto; top:0; bottom:0;}
+    .h_cont1 ul.nav {float:right; display: block; width:80%; height:100%; z-index: 99; }
+    .h_cont1 ul.nav > li {float:right; width:25%; right: 0;}
+    .h_cont1 ul.nav > li > a { display: block; font-size:1.2rem; height:60px;line-height:60px; padding:2px 1px; letter-spacing: 1px; text-align:center; color:#fff;  white-space: nowrap;}
+    @media (min-width:1024px) and (max-width:1249px){ .h_cont1 ul.nav{width:75%;} }
+    @media (min-width:1250px) and (max-width:1599px){ .h_cont1 ul.nav{width:66%;} }
+    @media (min-width:1600px){ .h_cont1 ul.nav{width:55%;} }
+
+
+    #wrap2 { width:100%; background:#353535; }
+    .h_cont2 { position:relative; width:75%; height:60px; margin: 0 auto; }
+    .h_cont2 h1 {display: inline-block; width:150px; height:100%; left:10%;}
+    .h_cont2 h1 img {position:absolute; margin:auto; top:0; bottom:0;}
+    .h_cont2 ul.nav {float:right; display: block; width:80%; height:100%; z-index: 99; }
+    .h_cont2 ul.nav > li {float:right; width:25%; right: 0;}
+    .h_cont2 ul.nav > li > a { display: block; font-size:1.2rem; height:60px;line-height:60px; padding:2px 1px; letter-spacing: 1px; text-align:center; color:#fff;  white-space: nowrap;}
+    @media (min-width:1024px) and (max-width:1249px){ .h_cont2 ul.nav{width:75%;} }
+    @media (min-width:1250px) and (max-width:1599px){ .h_cont2 ul.nav{width:66%;} }
+    @media (min-width:1600px){ .h_cont2 ul.nav{width:55%;} }
+
+
+    #footer{ width:100%; height:380px; border-top:1px solid #ddd; background:#353535;}
+    #footer #wrap { width:70%; margin:30px auto; position:relative; overflow: hidden}
+    
+    #footer #wrap .f_left { float:left; width:45%; margin-top:20px; }
+    #footer #wrap .f_left img{ width:120px; }
+
+    #footer #wrap .f_right { float:left; width:55%; font-size:15px; }
+    #footer #wrap .f_right ul.co { float:right; width:100%; /*padding:1% 0;*/ text-align:center; }
+    #footer #wrap .f_right ul.co li {width:90%; padding:3px 0 3px 18px; font-size:13px; letter-spacing:1px;}
+    #footer #wrap .Wbline {width: 100%;}
+
+    #footer #wrap h1 { padding-top:10px; font-size:26px; letter-spacing:1px; color:#fff; line-height:50px; -webkit-font-smoothing: subpixel-antialiased; }
+    #footer #wrap h2 { padding-top:10px; font-size:18px; letter-spacing:1px; color:#fff;line-height:18px; -webkit-font-smoothing: subpixel-antialiased; }
+    #footer #wrap h3 { padding-top:10px; font-size:14px; letter-spacing:1px; color:#b7b7b7; }
+    #footer #wrap h4 { padding-top:25px; font-size:20px; letter-spacing:1px;  color:#fff;line-height:30px; -webkit-font-smoothing: subpixel-antialiased; }
+
+    .f_left h1 {text-align:left;}
+    .f_right h1 {text-align:right;}
+    .f_left h2 {text-align:left;}
+    .f_right h2 {text-align:right;}
+    .f_left h3 {text-align:left;}
+    .f_right h3 {text-align:right;}
+    .f_left h4 {text-align:left;}
+    .f_right h4 {text-align:right;}
+}
+
+/* @media only screen and (max-width:1350px) {
+    .h_cont1 { position:relative; width:75%; height:60px; margin: 0 auto; }
+	.h_cont1 ul.nav {float:right; display: block; width:80%; height:100%; right: 10%; z-index: 99; }
+	.h_cont1 ul.nav > li {float:right; width:25%; right: 0;}
+} */

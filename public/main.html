@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>인사이드 방탈출카페 Inside Room</title>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> -->
+	<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta name="naver-site-verification" content="1a631ad3158c79a5d082e6a0d08e6cf13b2fe59d" />
+	<meta name="description" content="인사이드 방탈출카페 Inside Room">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="일산방탈출, 일산방탈출카페, 라페스타방탈출카페, 라페스타, 일산데이트, 라페스타데이트, 인사이드, 인사이드룸, INSIDE">
+	<meta name="subject" content="인사이드룸">
+	<meta name="title" content="일산방탈출, 일산방탈출카페, 라페스타방탈출카페, 라페스타, 일산데이트, 라페스타데이트, 인사이드, 인사이드룸, INSIDE">
+	<meta name="author" content="인사이드룸">
+	<meta name="classification" content="Text & Images">
+	<meta name="copyright" content="인사이드룸">
+	<meta name="robots" content="follow">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="인사이드룸">
+	<meta property="og:description" content="일산방탈출, 일산방탈출카페, 라페스타방탈출카페, 라페스타, 일산데이트, 라페스타데이트, 인사이드, 인사이드룸, INSIDE">
+	<meta property="og:image" content="http://insideroom.co.kr/images/common/logo_bg.png">
+	<meta property="og:url" content="http://insideroom.co.kr/">
+	<meta name="twitter:card" content="인사이드룸">
+	<meta name="twitter:title" content="인사이드룸">
+	<meta name="twitter:description" content="일산방탈출, 일산방탈출카페, 라페스타방탈출카페, 라페스타, 일산데이트, 라페스타데이트, 인사이드, 인사이드룸, INSIDE">
+	<meta name="twitter:domain" content="인사이드룸">
+	<link rel="canonical" href="http://insideroom.com">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/js/jquery-1.7.1.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/css/import.css" />
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+
+	<script type="text/javascript" src="/js/include.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="/js/slick.min.js"></script>
+	<script type="text/javascript" src="/js/ScrollTrigger.min.js"></script>
+	<script type="text/javascript" src="/js/modernizr.js"></script>
+
+	<style>
+		div#header div#wrap2 {
+			display: none;
+		}
+
+		div#m_header div#m_wrap2 {
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			if (Modernizr.touch) {
+				// handle the adding of hover class when clicked
+				$(".img").click(function (e) {
+					if (!$(this).hasClass("hover")) {
+						$(this).addClass("hover");
+					}else{
+						$(this).removeClass("hover");
+					}
+				});
+			} else {
+				// handle the mouseenter functionality
+				$(".img").mouseenter(function () {
+					$(this).addClass("hover");
+				})
+					// handle the mouseleave functionality
+					.mouseleave(function () {
+						$(this).removeClass("hover");
+					});
+			}
+
+			$("#screen_black").css({ 'top': '59px', 'height': $(document).height() - 59 });
+			$("#m_header ul.menu").hide();
+			$("#m_header .m_menu").click(function () {
+				alert("AA");
+				$("ul.menu").show();
+			});
+			$("ul.menu li a.close").click(function () {
+				$("ul.menu").hide();
+			});
+			$(".h_cont ul.sub").hide();
+			$(".h_cont ul.menu li").click(function () {
+				$("ul", this).slideToggle("fast");
+			});
+
+			$('.themeA').each(function(){
+				$(this).hide();
+			});
+			$('.themebtn').each(function(index){
+				$(this).click(function(){
+					$(".themeA").hide();
+					var idName = '#themeA'+index;
+					$(idName).show();
+				});
+			});
+			$(".themeA_exit").click(function(){
+				$(".themeA").hide();
+			});
+
+			var han_contpom = $("#m_header").offset();
+			$(window).scroll(function () {
+				if ($(document).scrollTop() > han_contpom.top) {
+					$("#m_header").css("position", "fixed");
+					$("#m_header").css("top", "0");
+					$("#m_header").css("z-index", "999");
+					$("#m_wrap1").hide();
+					$("#m_wrap2").show();
+				} else {
+					// $("#m_header").css("position","fixed"); 
+					//$("#m_header").css("top","0");
+					$("#m_wrap1").show();
+					$("#m_wrap2").hide();
+				}
+			});
+		});
+		$(function () {
+			var han_contpos = $("#header").offset().top;
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > han_contpos) {
+					$("#header").css("position", "fixed");
+					$("#header").css("top", "0");
+					$("#wrap1").hide();
+					$("#wrap2").show();
+				} else {
+					$("#header").css("top", "0");
+					$("#wrap1").show();
+					$("#wrap2").hide();
+				}
+			});
+		});
+		function pop_center(url, w, h, tb, st, di, mb, sb, re) {
+			var position = "width=" + w + ",height=" + h + ",left=" + ((screen.width - w) / 2) + ",top=" + ((screen.height - h) / 2) + ",toolbar=" + tb + ",directories=" + di + ",status=" + st + ",menubar=" + mb + ",scrollbars=" + sb + ",resizable=" + re + "";
+			window.open(url, '', position);
+		}
+
+		function start(num) {
+			if (num == 1) {
+				//화면의 높이와 너비를 구한다.
+				document.getElementById("popup").style.display = "block";
+			}
+			else if (num == 2) {
+				document.getElementById("popup").style.display = "none";
+			}
+		}
+
+
+	</script>
+</head>
+
+<body>
+	<div id="header">
+		<div id="wrap1">
+			<div class="h_cont1">
+				<h1><a href="/"><img src="/images/common/logo_han.png" class="logo" alt="로고" /></a></h1>
+				<ul class="nav">
+					<li><a href="/location">오시는길</a></li>
+					<li><a href="/confirm">예약확인&#47;취소</a></li>
+					<li><a href="/reserve">예약하기</a></li>
+					<li><a href="/">테마소개</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div style="clear: both"></div>
+		<div id="wrap2">
+			<div class="h_cont2">
+				<h1><a href="/"><img src="/images/common/logo_han.png" class="logo" alt="로고" /></a></h1>
+				<ul class="nav">
+					<li><a href="/location">오시는길</a></li>
+					<li><a href="/confirm">예약확인&#47;취소</a></li>
+					<li><a href="/reserve">예약하기</a></li>
+					<li><a href="/">테마소개</a></li>
+				</ul>
+			</div>
+		</div>
+		<div style="clear: both"></div>
+	</div>
+	<!--// h_cont1 -->
+	<div style="clear: both"></div>
+
+	<div id="m_header">
+		<div id="m_wrap1">
+			<a href="/"><img src="/images/common/logo_han.png" class="logo" alt="로고" /></a>
+			<a href="#/" class="to_nav"><img src="/images/common/menu_w.png" style="width:30px" alt="메뉴" /></a>
+			<div id="nav_wrap">
+				<ul class="nav">
+					<li><a href="/">테마소개</a></li>
+					<li><a href="/reserve">예약하기</a></li>
+					<li><a href="/confirm">예약확인&#47;취소</a></li>
+					<li><a href="/location">오시는길</a></li>
+					<div style="clear: both"></div>
+				</ul>
+			</div>
+		</div>
+
+		<div style="clear: both"></div>
+
+		<div id="m_wrap2">
+			<a href="/"><img src="/images/common/logo_han.png" class="logo" alt="로고" /></a>
+			<a href="#/" class="to_nav"><img src="/images/common/menu_w.png" style="width:30px" alt="메뉴" /></a>
+			<div id="nav_wrap">
+				<ul class="nav">
+					<li><a href="/">테마소개</a></li>
+					<li><a href="/reserve">예약하기</a></li>
+					<li><a href="/confirm">예약확인&#47;취소</a></li>
+					<li><a href="/location">오시는길</a></li>
+					<div style="clear: both"></div>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="screen_black"></div>
+	<script>
+		window.counter = function () {
+			// this refers to the html element with the data-scroll-showCallback tag
+			var span = this.querySelector('span');
+			var current = parseInt(span.textContent);
+
+			span.textContent = current + 1;
+		};
+
+		document.addEventListener('DOMContentLoaded', function () {
+			var trigger = new ScrollTrigger({
+				addHeight: true
+			});
+		});
+	</script>
+
+	<div id="contents">
+		<div id="cont">
+			<img src="/images/main/notice.jpg" />
+		</div>
+		<!--// visual -->
+		<div id="m_cont">
+			<img src="images/main/m_notice.jpg" style="width:100%;">
+		</div>
+		<!--// visual -->
+		<div style="clear: both"></div>
+		<div class="noti">
+			<div class="box1">
+				<h2>인사이드 방탈출</h2>
+				<div class="Lbline"></div><br />
+				<p>방탈출이란?</p>
+				<h6>
+					방탈출은 제한시간 60분 안에<br />
+					특정 테마를 가진 방 안에 들어가<br />
+					주어진 문제를 해결하고 탈출하는 게임입니다<br />
+				</h6>
+			</div>
+		</div>
+		<div id="cont1" class="block">
+			<div class="box1">
+				<h2>테마소개</h2>
+				<div class="Lbline"></div><br />
+			</div>
+			<div class="themedata">
+				<% themeData.forEach(function(item, index){ %>
+				<div class="theme1">
+					<div id="effect-2" class="effects clearfix">
+						<div class="img">
+							<img src="<%= item.image %>" id="thema" />
+							<div class="overlay">
+								<div class="expand" style="color:#fff;" >
+									<% item.comment.forEach(function(cItem, cIndex){ %>
+										<%= cItem %><br />
+									<% }); %>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="themebtn">
+						<a>
+							<div class='to1'><%= item.name %></div>
+						</a>
+					</div>
+				</div>
+				<% }); %>
+				<div style="clear: both"></div>
+				<% themeData.forEach(function(item, index){ %>
+				<div class="themeA" id="themeA<%= index %>" style="display:none">
+					<div class="themeA_top">
+						<div class="themeA_title">테마정보</div>
+						<div class="themeA_exit"><u>닫기</u></div>
+					</div>
+					<div class="themeA_content">
+						<div class="div_img">
+							<img src="<%= item.image %>" id="img_themeA">
+						</div>
+						<div class="div_explain">
+							<div class="themeA_name"><%= item.name %></div>
+							<div class="themeA_person"><%= item.person %></div>
+							<div class="themeA_level">난이도 : <%= item.level %></div>
+							<div class="themeA_special">특징 : <%= item.special %></div>
+							<div class="Lbline"></div><br />
+							<div class="themeA_substance">
+								<% item.substance.forEach(function(cItem, cIndex){ %>
+									<%= cItem %><br />
+								<% }); %></div>
+						</div>
+					</div>
+				</div>
+				<% }); %>
+			</div>
+		</div>
+		<div style="clear: both"></div>
+	</div>
+	<!-- <div id="mask"></div> -->
+	<div id="footer">
+		<div id="wrap">
+			<div class="f_left">
+				<img src="/images/common/logo_w.png" class="logo" alt="로고" /><br />
+				<h1>인사이드 방탈출카페</h1>
+				<div class="Wbline"></div>
+				<br />
+				<h3>
+					대표 김광수 <br />
+					사업자등록번호 121-69-53572<br />
+					사업장주소 경기도 고양시 일산동구 무궁화로 25-3, 3층 302, 303호<br />
+					(장항동, 이레21투빌딩)<br /><br />
+				</h3>
+			</div>
+			<div class="f_right">
+				<ul class="co">
+					<li>
+						<h1>고객센터</h1>
+						<div class="Wbline"></div>
+						<h4>이용 / 예약안내 :  <br />
+							Tel : (031) 915 - 2077 <br />
+							<!-- Mob : 010 - 6386 - 1357 <br /> -->
+						</h4>
+						<h4>운영시간(입장시간) : <br />
+						(월-금) 12:00 ~ 21:30 <br />
+						(토-일) 11:00 ~ 22:30
+						</h4>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div style="clear: both"></div>
+	</div>
+	<!-- <a href="tel:0319152077">
+		<img src="">
+	</a> -->
+	<!--// footer -->
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+body {height:100%;overflow-y:auto;-webkit-overflow-scrolling: touch;}
+div#contents {width:100%; padding-top: 120px; background: url('../images/main/bg_w.jpg') center repeat-y; padding-bottom: 50px; text-align: center;}
+
+/*  Mobile */
+@media (max-width:1023px){
+    #cont { display:none; } 
+    #m_cont { 
+        width: 100%;
+        height: 100%;
+    } 
+
+    .box1{width:90%; margin:0 auto; text-align: center;}
+    .box1 h2 {font-size:30px; font-weight:bold; letter-spacing:3px; width: 100%; margin-bottom: 5px; text-align: center;}
+    .box1 h6 {font-size:14px; line-height: 28px; letter-spacing:2px; width: 100%; text-align: center;}
+
+    .themedata {width:100%; text-align: center; margin:0 auto; padding:5%;}
+    .selectArea {display: inline-block; width:70%; margin:50px 0 20px;}
+    .selectArea h5 {display: inline-block; height:100%; margin:0 auto;}
+    .selectArea .datepicker {margin-bottom:10px; vertical-align:middle; max-width:190px; position:relative; display: inline-block; font-family: 'Nanum Square','Open Sans'; text-decoration: none; text-align: center; color: #505050; }
+    .selectArea .datepicker input { border-color: #1a1a1a; color: #fff; background-color: #1a1a1a; appearance: none; margin:0; border:1px solid; padding: 5px 10px; height: 45px; line-height: 45px; box-sizing: border-box; font-size: 1rem;}
+    .selectArea .datepicker .ico {position:absolute; top:0; right:0; background:url('/images/main/ico_cal_white.png') center no-repeat; margin-right: 7px; width: 22px; text-align: center; line-height: inherit; display: inline-block; height: 100%; min-height: 22px;  color:#505050; }
+
+    .theme1 {float:left; width: 100%; height:auto; padding:20px; margin-bottom:50px; background: #e8e8e8; border:5px solid #e0e0e0; border-radius: 10px;}
+    .theme1 #effect-2 {float:left;width:100%; height:auto;}
+    .theme1 .img {overflow: hidden; width:100%;; height:auto; border-radius: 5px;}
+    .theme1 .img img {width:100%; height:auto; overflow: hidden;}
+    .theme1 .themetime {float:right; width:100%; text-align: left;}
+    .theme1 .themetime .name1 {margin:10px 0; text-align: center;}
+    .theme1 .themetime .name1 h2 {font-size:24px; font-weight: bold;}
+    .theme1 .themetime .time1 {display:inline-block; height:27%; padding:5px; color:#fff; font-size:24px; text-align:center; border:1px solid #fff; font-weight:bold; margin-bottom:5px;} 
+    .theme1 .themetime .canres {background:#5db335; }
+    .theme1 .themetime .cantres {background:#a0a0a0; }
+    .theme1 .themetime .canres:hover {background:#368312; cursor:pointer; } 
+    .theme1 .themetime .time1 p.intime {vertical-align: baseline; text-decoration: none; margin-bottom: 0; background: transparent;}
+    .theme1 .themetime .time1 p.instate {vertical-align: baseline; text-decoration: none; margin-bottom: 0; background: transparent;}
+
+    div.expand {
+        margin:0px auto;
+        display: block;
+        position:absolute;
+        z-index:100;
+        width:92%;
+        height:100%;
+        text-align:center;
+        color: #fff;
+        left: 0;
+        right: 0;
+        top:25%;
+        margin: -10px auto 0 auto;
+    }
+
+    @media (max-width:349px){
+        .theme1 .themetime .time1 {border-radius: 5px; width:22%;}
+        .theme1 .themetime .time1 p.intime { font-size:15px; line-height: 20px;}
+        .theme1 .themetime .time1 p.instate { font-size:10px; line-height: 12px; }
+        .box1 h2 {font-size:24px;}
+        .box1 h6 {font-size:11px;}
+        div.expand { font-size: 10px; }
+    }
+    @media (min-width:350px) and (max-width:449px){
+        .theme1 .themetime .time1 {border-radius: 10px; width:23%;}
+        .theme1 .themetime .time1 p.intime { font-size:18px; line-height: 24px;}
+        .theme1 .themetime .time1 p.instate { font-size:11px; line-height: 16px; }
+        .box1 h2 {font-size:27px;}
+        .box1 h6 {font-size:12px;}
+        div.expand { font-size: 12px; }
+    }
+    @media (min-width:450px){
+        .theme1 .themetime .time1 {border-radius: 15px; width:24%;}
+        .theme1 .themetime .time1 p.intime { font-size: 26px; line-height: 30px; margin-top:0px;}
+        .theme1 .themetime .time1 p.instate { font-size: 14px; line-height: 18px; }
+        .box1 h2 {font-size:30px;}
+        .box1 h6 {font-size:14px;}
+        div.expand { font-size: 14px; }
+    }
+
+
+}
+
+/*  PC */
+@media (min-width:1024px){
+    #cont { 
+        width: 100%;
+        height: 100%;
+    } 
+    #m_cont { display:none; } 
+
+    .box1{width:70%; margin:0 auto; text-align: center;}
+    .box1 h2 {font-size:42px; font-weight:bold; letter-spacing:3px; width: 100%; margin-bottom: 5px; text-align: center;}
+    .box1 p {font-size:26px; font-weight:bold; letter-spacing:2px; width: 100%; text-align: center;}
+    .box1 h6 {font-size:18px; line-height: 28px; letter-spacing:2px; width: 100%; text-align: center;}
+
+    .themedata {width:70%; text-align: center; margin:0 auto; padding:20px;}
+    .selectArea {display: inline-block; width:70%; margin:50px 0 50px;}
+    .selectArea h5 {display: inline-block; height:100%; margin:0 auto;}
+    .selectArea .datepicker {margin-bottom:10px; vertical-align:middle; max-width:190px; position:relative; display: inline-block; font-family: 'Nanum Square','Open Sans'; text-decoration: none; text-align: center; color: #505050; }
+    .selectArea .datepicker input { border-color: #1a1a1a; color: #fff; background-color: #1a1a1a; appearance: none; margin:0; border:1px solid; padding: 5px 10px; height: 45px; line-height: 45px; box-sizing: border-box; font-size: 1rem;}
+    .selectArea .datepicker .ico {position:absolute; top:0; right:0; background:url('/images/main/ico_cal_white.png') center no-repeat; margin-right: 7px; width: 22px; text-align: center; line-height: inherit; display: inline-block; height: 100%; min-height: 22px;  color:#505050; }
+
+    .theme1 {width: 100%; height: 280px; padding:10px; margin-bottom:50px; background: #e8e8e8; border:5px solid #e0e0e0; border-radius: 10px;}
+    .theme1 #effect-2 {float:left; height:100%; width:20%;}
+    .theme1 .img {overflow: hidden; height:100%;}
+    .theme1 .img img {width:auto; height:100%;; overflow: hidden;}
+    .theme1 .themetime {float:right; width:75%; height:100%; text-align: left;}
+    .theme1 .themetime .name1 {height:15%;}
+    .theme1 .themetime .name1 h2 {font-size:24px; font-weight: bold;}
+    .theme1 .themetime .time1 {display:inline-block; width:20%; height:27%; padding:5px; color:#fff; font-size:24px; text-align:center; border:1px solid #fff; font-weight:bold; margin:2px 0;} 
+    .theme1 .themetime .canres {background:#5db335; }
+    .theme1 .themetime .cantres {background:#a0a0a0; }
+    .theme1 .themetime .canres:hover {background:#368312; cursor:pointer; } 
+    .theme1 .themetime .time1 p.intime {vertical-align: baseline; text-decoration: none; margin-bottom: 0; background: transparent;}
+    .theme1 .themetime .time1 p.instate {vertical-align: baseline; text-decoration: none; margin-bottom: 0; background: transparent;}
+
+    div.expand {
+        margin:0px auto;
+        display: block;
+        position:absolute;
+        z-index:100;
+        width:92%;
+        height:100%;
+        text-align:center;
+        color: #fff;
+        left: 0;
+        right: 0;
+        top:25%;
+        margin: -30px auto 0 auto;
+    }
+
+    @media (max-width:1249px){
+        .theme1 {height: 200px;}
+        .theme1 .themetime .time1 {border-radius: 20px;}
+        .theme1 .themetime .time1 p.intime { font-size:20px; line-height: 22px;}
+        .theme1 .themetime .time1 p.instate { font-size:12px; line-height: 14px; background-color:transparent;}
+        div.expand { font-size: 13px;}
+    }
+    @media (min-width:1250px) and (max-width:1499px){
+        .theme1 {height: 240px;}
+        .theme1 .themetime .time1 {border-radius: 25px;}
+        .theme1 .themetime .time1 p.intime { font-size:24px; line-height: 27px;}
+        .theme1 .themetime .time1 p.instate { font-size:14px; line-height: 18px; background-color:transparent;}
+        div.expand { font-size: 15px;}
+    }
+    @media (min-width:1500px){
+        .theme1 {height: 280px;}
+        .theme1 .themetime .time1 {border-radius: 30px;}
+        .theme1 .themetime .time1 p.intime { font-size: 28px; line-height: 30px; margin-top:2px;}
+        .theme1 .themetime .time1 p.instate { font-size: 16px; line-height: 20px; background-color:transparent;}
+        div.expand { font-size: 17px;}
+    }
+
+
+}

@@ -1,0 +1,833 @@
+/*
+Theme Name: The Escape Game - 2018
+Description: Bootstrap Theme converted to WordPress
+Version: 0.0.1
+*/
+
+.group-box-bg {
+	padding: 10px;
+}
+
+.blog .BannerBox {
+	background-position: top center !important;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+.choose-your-location {
+	width: 190px !important;
+}
+
+@media screen and (max-width:980px) {
+	#responsive-menu-pro-container {
+		width: 60% !important;
+	}
+}
+
+.btn-center {
+	margin: 0 auto;
+	display: block;
+}
+
+@media screen and (max-width:991px) {
+	.iron-gate-theme .escape-game-package img {
+		width: 100% !important;
+	}
+}
+
+@media (max-width: 400px) {
+	.iron-gate-theme .amazon-btn {
+		margin-bottom: 15px !important;
+	}
+}
+
+.play-icon {
+	position: absolute;
+	color: #fff;
+	font-size: 5rem;
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.z-index-2 {
+	z-index: 2;
+}
+
+.partials-form-php .form-section .preferred-date-datepicker-content {
+	position: relative
+}
+
+.partials-form-php .form-section .preferred-date-datepicker-content .preferred-date-datepicker-section {
+	position: absolute;
+	top: 49px;
+	left: 0;
+	background: #fff;
+	padding: 10px;
+	z-index: 9;
+	border: #e6e6e6 solid 2px
+}
+
+@media (max-width: 640px) {
+	.partials-form-php .form-section .preferred-date-datepicker-content .preferred-date-datepicker-section {
+		top: 60px
+	}
+}
+
+.partials-form-php .form-section .preferred-date-datepicker-content .preferred-date-datepicker-section .not-sure-button {
+	width: auto !important;
+	padding: 0px 10px;
+	margin-top: 5px
+}
+
+.partials-form-php .form-section .preferred-date-datepicker-content .preferred-date-datepicker-section .preferred-date-datepicker::after {
+	content: '';
+	display: inline-block;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid #e6e6e6;
+	border-top: 0;
+	border-bottom-color: #e6e6e6;
+	position: absolute;
+	top: -9px;
+	left: 10px
+}
+
+.partials-form-php .form-section .preferred-date-datepicker-content .preferred-date-datepicker-section .preferred-date-datepicker .datepicker {
+	font-weight: 400;
+	color: #212529 !important;
+	font-family: 'DINNextLTPro-Regular' !important
+}
+
+.partials-form-php .form-section .preferred-date-datepicker-content .preferred-date-datepicker-section .preferred-date-datepicker .datepicker.datepicker-inline {
+	border: none;
+	padding: 0px !important
+}
+
+@media screen and (width: 768px) {
+	.topred-box-content .link-pipe {
+		padding: 0 2px !important;
+	}
+	.partials-content-php p {
+		font-size: .85rem !important;
+	}
+}
+
+@media (max-width: 1225px) {
+	header .topBox .top-Links {
+		right: 0 !important;
+		position: relative !important;
+		width: 100% !important;
+		text-align: center;
+	}
+}
+
+.way-to-contact-us-section-v2 .contact-info {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.way-to-contact-us-section-v2 .contactv2-img {
+	width: 50px;
+	margin-right: 10px;
+}
+
+.way-to-contact-us-section-v2 .contact-info a, .way-to-contact-us-section-v2 .contact-info h6 {
+	width: calc(100% - 60px);
+	margin-bottom: 0;
+	margin-left: auto;
+}
+
+.text-capitalized {
+	text-transform: capitalize;
+}
+
+.way-to-contact-us-section-v2 .contact-info a {
+	color: #ca2127;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+
+.way-to-contact-us-section-v2 .border-right.border-dark {
+	border-right: 3px solid #bbbbbb !important;
+}
+
+@media (max-width:1199px) {
+	.way-to-contact-us-section-v2 {
+		text-align: center;
+	}
+	.way-to-contact-us-section-v2 .border-right.border-dark {
+		border-right: none !important;
+	}
+	.way-to-contact-us-section-v2 .border-right-bottom {
+		border-bottom: 3px solid #bbbbbb;
+		max-width: 280px;
+		margin: 0 auto;
+	}
+	.way-to-contact-us-section-v2 .contact-info {
+		flex-direction: column;
+		margin: 20px 0;
+	}
+	.way-to-contact-us-section-v2 .contact-info a, .way-to-contact-us-section-v2 .contact-info h6 {
+		width: auto;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 1250px) and (min-width: 1026px) {
+	header .top-navigation .menu li {
+		margin-left: 5px !important;
+		margin-right: 5px !important;
+	}
+	header .top-navigation .menu li.btn-medium {
+		width: 170px !important;
+	}
+}
+
+.contact-info.call-block {
+	width: 166px;
+}
+
+.contact-info.email-block {
+	width: 250px;
+}
+
+.sanitation-content h2 {
+	color: #fff;
+	text-transform: initial;
+}
+
+.sanitation-content h5 {
+	font-size: 1.45rem;
+	color: #032a39;
+	font-family: dinnextltpro-bold;
+	text-transform: initial;
+	line-height: 1.125;
+	margin-top: 0px !important;
+}
+
+.sanitation-content p {
+	color: #032a39;
+	text-transform: initial;
+	font-weight: bold;
+}
+
+.sanitation-content h4 {
+	font-size: 1.7rem;
+}
+
+.single-post .posted-date {
+	font-family: 'DINNextLTPro-Bold';
+	font-weight: normal !important;
+}
+
+.single-post .title-blog {
+	font-size: 80px;
+	text-transform: none;
+	line-height: 70px;
+}
+
+.single-post .tags {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.single-post .tags a {
+	margin-right: 15px;
+	margin-bottom: 15px;
+	padding: 10px;
+	background: #f4f4f4;
+	color: #000;
+	font-size: 18px;
+	transition: all 0.5s ease;
+}
+
+.single-post .tags a:hover {
+	background: #ca2127;
+	color: #fff;
+	text-decoration: none;
+}
+
+.single-post .posted-date {
+	font-size: 18px;
+	margin: 15px 0;
+	font-weight: bold;
+}
+
+.single-post em {
+	font-weight: bold;
+}
+
+.single-post ol, .single-post ul, .single-post dl {
+	margin-bottom: 2rem;
+}
+
+.single-post .blog-content h4, .single-post .blog-content h4 b, .single-post .blog-content h4 strong, .single-post .blog-content h3, .single-post .blog-content h3 b, .single-post .blog-content h3 strong {
+	font-size: 40px !important;
+	margin: 25px 0;
+	line-height: 45px !important;
+	font-family: dinnextltpro-boldcondensed !important;
+	font-weight: normal;
+}
+
+.single-post .blog-content h2 strong {
+	font-weight: normal !important;
+}
+
+.single-post .blog-content, .single-post .blog-content p {
+	font-size: 20px;
+	line-height: 30px !important;
+}
+
+.single-post .blog-gradient {
+	background: #f3001d;
+	background: -moz-linear-gradient(left, #f3001d 0%, #371754 100%);
+	background: -webkit-linear-gradient(left, #f3001d 0%, #371754 100%);
+	background: linear-gradient(to right, #f3001d 0%, #371754 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3001d', endColorstr='#371754', GradientType=1);
+}
+
+/*.single-post .wp-block-image img {max-width:30% !important;}
+ .single-post .image-50 img {max-width:50% !important;}*/
+
+.blog-left-section p>strong, .blog-left-section li>strong, .blog-left-section p>b, .blog-left-section li>b {
+	font-family: 'dinnextltpro-boldcondensed';
+	font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+	.single-post .title-blog {
+		font-size: 75px;
+	}
+	.single-post .tags a, .single-post .posted-date {
+		font-size: 25px;
+	}
+	/*.single-post .blog-content, .single-post .blog-content p {font-size: 30px;line-height: 40px !important;} */
+	.single-post .blog-content h4, .single-post .blog-content h4 b, .single-post .blog-content h4 strong {
+		font-size: 35px !important;
+	}
+	.sanitation-content h2 {
+		font-size: 2.25rem;
+		line-height: 36px;
+	}
+	.sanitation-content h5 {
+		font-size: 1.25rem;
+		line-height: 1.125;
+	}
+	.sanitation-content h4 {
+		line-height: 1;
+		font-size: 1.35rem;
+	}
+}
+
+.remot-logo {
+	margin: 20px;
+}
+
+h1.remoteh1 {
+	font-size: 30px;
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	margin-bottom: 0;
+	text-align: center;
+	line-height: normal;
+}
+
+@media (max-width: 1366px) {
+	h1.remoteh1 {
+		bottom: 10px;
+	}
+}
+
+@media (max-width: 1140px) {
+	h1.remoteh1 {
+		bottom: 5px;
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	h1.remoteh1 {
+		bottom: 0px;
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.single-post .title-blog {
+		font-size: 44px;
+		line-height: 50px;
+	}
+	.single-post .blog-content, .single-post .blog-content p {
+		font-size: 20px;
+		line-height: 30px !important;
+	}
+	.single-post .wp-block-image img {
+		max-width: 100%!important;
+	}
+	.remot-logo {
+		margin: 5px;
+	}
+}
+
+@media (max-width: 425px) {
+	h1.remoteh1 {
+		font-size: 14px;
+		bottom: 10px;
+	}
+	.remote-header-img, .remote-mobile-image.alignnone {
+		min-height: 170px;
+	}
+	.remot-logo {
+		min-width: 235px;
+	}
+	.single-post .tags a, .single-post .posted-date {
+		font-size: 16px;
+		margin-right: 8px;
+		margin-bottom: 8px;
+	}
+	.blog-left-section p>strong {
+		font-size: 1.8rem !important;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.single-post .title-blog {
+		font-size: 38px;
+		line-height: 38px;
+	}
+}
+
+/*** Rippke ****/
+
+#sixty-min-escape .bg-container {
+	background-image: url('images/new-home-hero-mobile.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+@media only screen and (min-width: 768px) {
+	#sixty-min-escape .bg-container {
+		background-image: url('images/new-home-hero.jpg');
+	}
+}
+
+#sixty-min-escape .content {
+	align-items: center;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 600px;
+	padding: 40px 0;
+	text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+	#sixty-min-escape .content {
+		min-height: 660px;
+	}
+}
+
+#sixty-min-escape h1 {
+	font-family: 'DINNextLTPro-Bold';
+	font-size: 37px;
+	line-height: .85;
+}
+
+#sixty-min-escape .btn-bigger {
+	font-size: 25px;
+	min-width: 300px;
+}
+
+@media only screen and (min-width: 768px) {
+	#sixty-min-escape .content {
+		justify-content: center;
+		padding: 0;
+	}
+	#sixty-min-escape h1 {
+		font-size: 80px;
+		margin-bottom: 52px;
+	}
+	#sixty-min-escape .btn-bigger {
+		font-size: 30px;
+		width: 400px;
+	}
+}
+
+#social-immersive-challenging {
+	padding: 80px 0;
+}
+
+#social-immersive-challenging h2 {
+	font-family: 'DINNextLTPro-Bold';
+	font-size: 47px;
+	line-height: 1;
+	margin-bottom: 50px;
+	text-transform: unset;
+}
+
+#social-immersive-challenging p {
+	font-size: 27px;
+	line-height: 1.75
+}
+
+@media only screen and (min-width: 768px) {
+	#social-immersive-challenging h2 {
+		font-size: 70px;
+	}
+	#social-immersive-challenging p {
+		line-height: 1.6
+	}
+}
+
+.play-btn-large {
+	height: auto;
+	width: 125px;
+	transition: opacity .2s ease-in-out;
+}
+
+.embed-responsive:hover .play-btn-large {
+	opacity: .8;
+}
+
+@media only screen and (min-width: 768px) {
+	.play-btn-large {
+		height: auto;
+		width: 175px;
+	}
+}
+
+#game-info {
+	padding: 115px 0;
+}
+
+@media only screen and (min-width: 992px) {
+	#game-info .row {
+		flex-direction: row-reverse;
+	}
+}
+
+#game-info .bg-container {
+	background-image: url('images/games-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-top: 80px;
+}
+
+@media only screen and (min-width: 992px) {
+	#game-info .bg-container {
+		padding-top: 0;
+	}
+}
+
+#game-info h2 {
+	color: #fff;
+	line-height: 1;
+	font-size: 70px;
+	margin-bottom: 90px;
+	text-transform: unset;
+}
+
+#game-info .headline-container {
+	justify-content: center;
+}
+
+@media only screen and (min-width: 992px) {
+	#game-info h2 {
+		font-size: 122px;
+		text-align: left;
+	}
+	#game-info .headline-container {
+		justify-content: flex-start;
+	}
+}
+
+#game-info .games-img-1 {
+	margin-top: 40px;
+	margin-bottom: -40px;
+}
+
+#game-info .games-img-2 {
+	margin-top: -40px;
+}
+
+#game-info .btn {
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-top: 60px;
+	width: auto;
+}
+
+#promos h3 {
+	font-family: 'DINNextLTPro-Bold';
+	text-transform: unset;
+}
+
+#promos p {
+	font-size: 27px;
+	line-height: 1.4;
+}
+
+#promos img {
+	margin-bottom: 50px;
+}
+
+#promos .promo {
+	margin: 35px 0;
+}
+
+@media only screen and (min-width: 992px) {
+	#promos .promo {
+		margin: 45px 0;
+	}
+}
+
+#locations {
+	padding: 60px 0;
+}
+
+@media only screen and (min-width: 768px) {
+	#locations {
+		padding: 90px 0;
+	}
+}
+
+#locations h2, #locations h3 {
+	font-family: 'DINNextLTPro-Bold';
+	text-transform: unset;
+}
+
+#locations h2 {
+	font-size: 47px;
+	margin-bottom: 65px;
+}
+
+@media only screen and (min-width: 768px) {
+	#locations h2 {
+		font-size: 70px;
+		margin-bottom: 80px;
+	}
+}
+
+#locations h3 {
+	font-size: 27px;
+}
+
+@media only screen and (min-width: 768px) {
+	#locations h3 {
+		font-size: 35px;
+	}
+}
+
+#locations a {
+	color: #ca2127;
+	font-family: 'DINNextLTPro-Bold';
+	font-size: 22px;
+	transition: color .2s ease-in-out;
+}
+
+@media only screen and (min-width: 768px) {
+	#locations a {
+		font-size: 25px;
+	}
+}
+
+#locations a:hover {
+	color: #373737;
+	text-decoration: none;
+}
+
+#contact {
+	padding: 60px 0;
+}
+
+@media only screen and (min-width: 768px) {
+	#contact {
+		padding: 90px 0;
+	}
+}
+
+#contact h2, #contact h3 {
+	font-family: 'DINNextLTPro-Bold';
+	text-transform: unset;
+}
+
+#contact h2 {
+	font-size: 47px;
+	margin-bottom: 65px;
+}
+
+#contact h3 {
+	font-size: 27px;
+}
+
+@media only screen and (min-width: 768px) {
+	#contact h3 {
+		font-size: 35px;
+	}
+}
+
+#contact p {
+	color: #ca2127;
+	font-family: 'DINNextLTPro-Bold';
+	font-size: 22px;
+	transition: color .2s ease-in-out;
+}
+
+#contact p a {
+	color: #ca2127;
+}
+
+@media only screen and (min-width: 768px) {
+	#contact p {
+		font-size: 25px;
+	}
+}
+
+#contact p a:hover {
+	color: #373737;
+	text-decoration: none;
+}
+
+#contact .btn {
+	display: inline-block;
+	margin-bottom: 75px;
+}
+
+@media only screen and (min-width: 992px) {
+	#contact .btn {
+		margin-bottom: 0px;
+	}
+}
+
+/*
+br:not(.mobile) {
+		display: none;
+}
+br.mobile {
+	display: block;
+}
+.img-desktop {
+		display: none;
+		height: auto;
+		margin: 0 auto;
+		max-height: 450px;
+		max-width: 100%;
+}
+.img-mobile {
+		display: inline;
+		height: auto;
+		margin: 0 auto;
+		max-width: 100%;
+}
+*/
+
+/* #sixty-min-escape .content {
+	display: flex;
+	height: 200px;
+	justify-content: space-around;
+	justify-content: space-evenly;
+	margin: 25px auto 40px;
+	max-width: 1000px;
+} */
+
+/* #sixty-min-escape .content>div {
+	width: auto;
+} */
+
+/* #sixty-min-escape h1 {
+	color: #fff;
+	line-height: 1;
+	margin: 0 0 .25rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#sixty-min-escape .btn-wrapper {
+	align-items: flex-end;
+	display: flex;
+	flex: 1;
+}
+
+#sixty-min-escape .btn.btn-white {
+	background-color: #fff;
+	color: #ca2127;
+	font-size: 29px;
+}
+
+#sixty-min-escape a {
+	background-color: #fff;
+	color: #ca2127;
+	font-size: 29px;
+	transition: all .2s;
+}
+
+#sixty-min-escape a:hover {
+	background: #98181c;
+	color: #fff;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+	#sixty-min-escape h1 {
+		font-size: 37px;
+	}
+	/* #sixty-min-escape .btn-wrapper {
+		max-width: 175px;
+		width: 100%
+	}
+	#sixty-min-escape .btn-wrapper a {
+		padding: 10px 0 6px;
+		width: 100%
+	}
+	#sixty-min-escape .content {
+		height: 150px;
+	}
+	#sixty-min-escape .content>div {
+		width: 100%;
+	}
+	#sixty-min-escape .content>div:first-of-type {
+		padding: 0 5px 0 10px;
+	}
+	#sixty-min-escape .content>div:last-of-type {
+		padding: 0 10px 0 5px;
+	} */
+}
+
+/* @media only screen and (max-width: 350px) {
+	#sixty-min-escape .content>div:last-of-type p br {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	#sixty-min-escape a {
+		font-size: .75rem;
+	}
+}
+
+@media only screen and (min-width: 760px) {
+	#sixty-min-escape .content {
+		height: 160px;
+	}
+	#sixty-min-escape .content>div {
+		width: 350px;
+	}
+	#sixty-min-escape h1 {
+		font-size: 2.75rem;
+	}
+} */
+

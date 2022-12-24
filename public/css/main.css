@@ -1,0 +1,183 @@
+body {height:100%;overflow-y:auto;-webkit-overflow-scrolling: touch;}
+div#contents {width:100%; background: url('../images/main/bg_w.jpg') center repeat-y; padding-bottom: 50px;}
+
+/*  Mobile */
+@media (max-width:1023px){
+    #cont {  display:none; }
+    #m_cont {  position:relative;width:100%;margin-top:60px; } 
+
+    .noti {width:100%; margin:4% auto; padding:0px 0 30px;}
+    .box1{width:90%; margin:0 auto; text-align: center;}
+
+    .box1 h2 {font-size:24px; font-weight:bold; letter-spacing:3px; width: 100%; margin-bottom: 5px; text-align: center;}
+    .box1 p {font-size:18px; font-weight:bold; letter-spacing:2px; width: 100%; text-align: center;}
+    .box1 h6 {letter-spacing:2px; width: 100%; text-align: center;}
+
+    .themedata {width:90%; text-align: center; margin:0 auto; padding:20px;}
+    .themedata .selectArea {display: inline-block; width:70%; margin:0 auto; margin-bottom: 20px;}
+    .themedata .selectArea .datepicker {margin-bottom:10px; vertical-align:middle; max-width:190px; position:relative; display: inline-block; font-family: 'Nanum Square','Open Sans'; text-decoration: none; text-align: center; color: #505050; }
+    .themedata .selectArea .datepicker input { border-color: #1a1a1a; color: #fff; background-color: #1a1a1a; appearance: none; margin:0; border:1px solid; padding: 5px; height: 45px; line-height: 45px; box-sizing: border-box; font-size: 1rem;}
+    .themedata .selectArea .datepicker .ico {position:absolute; top:0; right:0; background:url('/images/main/ico_cal_white.png') center no-repeat; margin-right: 7px; width: 22px; text-align: center; line-height: inherit; display: inline-block; height: 100%; min-height: 22px;  color:#505050; }
+
+    .theme1 {float:left; width: 50%; padding:1%; margin-bottom:10px; border:2px solid #ccc;}
+    .theme1 .img {display: block;}
+    .theme1 .img img {width: 100%;}
+    .theme1 .themebtn {padding-left:4px; padding-right: 9px;}
+
+    .theme1 .themebtn .to1 {margin:5px auto; width:100%; padding:10px; background:#5db335; color:#fff; text-align:center; border:1px solid transparent; font-weight:bold; white-space:nowrap;} 
+    .theme1 .themebtn .to1:hover {background:#fff; color:#222; border:1px solid #f6f6f6; cursor:pointer; } 
+    div.expand {
+        margin:0px auto;
+        display: block;
+        position:absolute;
+        z-index:100;
+        width:92%;
+        height:100%;
+        text-align:center;
+        color: #fff;
+        left: 0;
+        right: 0;
+        top:25%;
+        margin: -30px auto 0 auto;
+    }
+
+    @media (min-width:450px){ .theme1 .themebtn .to1 {font-size:17px;} div.expand{font-size:17px;} .box1 h6 {font-size:14px;}}
+    @media (min-width:350px) and (max-width:449px) { .theme1 .themebtn .to1 {font-size:13px;} div.expand{font-size:14px;}  .box1 h6 {font-size:14px;}}
+    @media (max-width:349px) { .theme1 .themebtn .to1 {font-size:12px;} div.expand{font-size:12px;}  .box1 h6 {font-size:13px;}}
+    
+    .themeA {display:none; position: fixed; width: 90%; height: 500px; top:18%; left:5%; z-index:30; background:rgba(255, 255, 255, 255); border:4px solid #aaa;}
+    .themeA_top {position:relative; width: 100%; height: 50px; background: #F8B829; text-align: center;}
+    .themeA_title {display: inline-block; font-weight: bold; color:black; font-size: 20px; height: 26px; margin:10px auto;}
+    .themeA_exit { float:right; color:black; font-size: 18px; height: 26px; margin:10px 20px; font-weight: bold;}
+    .themeA_exit:hover { cursor:pointer;}
+    .themeA_content {position:relative; width:100%; height:440px; margin:0; padding:0; background:url('../images/main/bg_w.jpg') center no-repeat;}
+    .div_img {float:left; width:30%; height: 440px; padding:5px 5px;}
+    .div_explain {float:left; width:70%; height: 440px; margin:0 0; padding:5px 5px;}
+    #img_themeA {width:100%; max-height: 440px;}
+    .themeA_name {color:black; font-weight: bold; height:50px; line-height: 50px;}
+    .themeA_person {color:black; text-align: right; height:30px; margin-top:10px; margin-right: 20px;}
+    .themeA_level {color:black; text-align: right; height:30px; line-height: 30px; margin-right: 20px;}
+    .themeA_special {color:black; text-align: right; height:30px; line-height: 30px; margin-right: 20px;}
+    .themeA_substance {color:black; height:250px; margin-right: 20px; margin-top:20px;}
+
+    @media (min-width:700px){ 
+        .themeA_name {font-size:22px;}
+        .themeA_person {font-size:16px; line-height: 28px;}
+        .themeA_level {font-size:16px; line-height: 28px;}
+        .themeA_special {font-size:16px; line-height: 28px;}
+        .themeA_substance { font-size:15px; line-height: 24px;} 
+    }
+    @media (min-width:470px) and (max-width:699px) { 
+        .themeA_name {font-size:22px;}
+        .themeA_person {font-size:14px; line-height: 24px;}
+        .themeA_level {font-size:14px; line-height: 24px;}
+        .themeA_special {font-size:14px; line-height: 24px;}
+        .themeA_substance { font-size:13px; line-height: 22px;} 
+    }
+    @media (min-width:360px) and (max-width:469px) { 
+        .div_img {width:30%; height: 160px; padding:5px 5px;}
+        .div_explain {float:none; width:100%; height: 440px; margin:0 0; padding:5px 5px; text-align: center;}
+        #img_themeA {max-height:160px;}
+        .Lbline {width:80%;}
+        .themeA_name {font-size:18px;}
+        .themeA_person {font-size:12px; line-height: 12px;}
+        .themeA_level {font-size:13px; line-height: 12px;}
+        .themeA_special {font-size:13px; line-height: 12px;}
+        .themeA_substance { font-size:13px; line-height: 22px;}
+    }
+    @media (max-width:359px) { 
+        .div_img {width:30%; height: 160px; padding:5px 5px;}
+        .div_explain {float:none; width:100%; height: 440px; margin:0 0; padding:5px 5px; text-align: center;}
+        #img_themeA {max-height:160px;}
+        .Lbline {width:80%;}
+        .themeA_name {font-size:15px;}
+        .themeA_person {font-size:10px; line-height: 14px;}
+        .themeA_level {font-size:10px; line-height: 14px;}
+        .themeA_special {font-size:10px; line-height: 14px;}
+        .themeA_substance { font-size:10px; line-height: 20px;}
+    }
+
+}
+
+
+/*  PC */
+@media (min-width:1024px){
+    #cont { 
+        width: 100%;
+        margin-top:60px;
+        text-align: center;
+        background: black;
+    } 
+    #m_cont { display:none; } 
+
+    @media (min-width:1200px){
+        #cont {height:150px;}
+        #cont div{width: 100%; height:150px;}
+        #cont img{display: inline-block; height:100%;}
+    }
+    @media (max-width:1199px){
+        #cont {height:150px;}
+        #cont div{width: 100%; height:150px;}
+        #cont img{display: inline-block; height:100%;}
+    }
+
+    .noti {width:100%; margin:4% auto; padding:0px 0 30px;}
+    .box1{width:70%; margin:0 auto; text-align: center;}
+    .box1 h2 {font-size:42px; font-weight:bold; letter-spacing:3px; width: 100%; margin-bottom: 5px; text-align: center;}
+    .box1 p {font-size:26px; font-weight:bold; letter-spacing:2px; width: 100%; text-align: center;}
+    .box1 h6 {font-size:18px; letter-spacing:2px; width: 100%; text-align: center;}
+
+    .themedata {width:60%; text-align: center; margin:0 auto; padding:20px;}
+    .themedata .selectArea {display: inline-block; width:70%; margin:0 auto; margin-bottom: 20px;}
+    .themedata .selectArea .datepicker {margin-bottom:10px; vertical-align:middle; max-width:190px; position:relative; display: inline-block; font-family: 'Nanum Square','Open Sans'; text-decoration: none; text-align: center; color: #505050; }
+    .themedata .selectArea .datepicker input { border-color: #1a1a1a; color: #fff; background-color: #1a1a1a; appearance: none; margin:0; border:1px solid; padding: 5px; height: 45px; line-height: 45px; box-sizing: border-box; font-size: 1rem;}
+    .themedata .selectArea .datepicker .ico {position:absolute; top:0; right:0; background:url('/images/main/ico_cal_white.png') center no-repeat; margin-right: 7px; width: 22px; text-align: center; line-height: inherit; display: inline-block; height: 100%; min-height: 22px;  color:#505050; }
+
+    .theme1 {float:left; width: 33.3%; padding:1%; margin-bottom:10px; border:2px solid #eee;}
+    .theme1 .img {display: block;}
+    .theme1 .img img {width: 100%;}
+    .theme1 .themebtn {padding-left:4px; padding-right: 9px;}
+    .theme1 .themebtn .to1 {margin:5px auto; width:100%; height:48px; padding:10px; background:#5db335; color:#fff; font-size:18px;  line-height: 24px; text-align:center; border:1px solid transparent; font-weight:bold; white-space:nowrap;} 
+    .theme1 .themebtn .to1:hover {background:#fff; color:#222; border:1px solid #f6f6f6; cursor:pointer; } 
+    div.expand {
+        margin:0px auto;
+        display: block;
+        position:absolute;
+        z-index:100;
+        width:92%;
+        height:100%;
+        text-align:center;
+        color: #fff;
+        font-size:17px;
+        left: 0;
+        right: 0;
+        top:25%;
+        margin: -30px auto 0 auto;
+    }
+
+    .themeA {position: fixed; width: 60%; height: 500px; top:15%; left:20%; z-index:30; background:rgba(255, 255, 255, 255); border:4px solid #aaa;}
+    .themeA_top {position:relative; width: 100%; height: 50px; background: #F8B829; text-align: center;}
+    .themeA_title {display: inline-block; font-weight: bold; color:black; font-size: 20px; height: 26px; margin:10px auto;}
+    .themeA_exit { float:right; color:black; font-size: 18px; height: 26px; margin:10px 20px; font-weight: bold;}
+    .themeA_exit:hover { cursor:pointer;}
+    .themeA_content {position:relative; width:100%; height:440px; margin:0; padding:0; background:url('../images/main/bg_w.jpg') center no-repeat;}
+    .themeA_area {position:absolute; top:50px; left:0; width:100%; height:400px; margin:0; padding:10px; border:1px solid #f6f6f6;}
+    .div_img {float:left; width:30%; height: 440px; padding:5px 5px;}
+    .div_explain {float:left; width:70%; height: 440px; margin:0 0; padding:5px 5px;}
+    #img_themeA {width:100%; max-height: 440px;}
+    .themeA_name {color:black; font-weight: bold; height:50px; font-size:24px; line-height: 50px;}
+    .themeA_person {color:black; font-size:18px; text-align: right; height:30px; line-height: 30px; margin-top:10px; margin-right: 20px;}
+    .themeA_level {color:black; font-size:18px; text-align: right; height:30px; line-height: 30px; margin-right: 20px;}
+    .themeA_special {color:black; font-size:18px; text-align: right; height:30px; line-height: 30px; margin-right: 20px;}
+    .themeA_substance {color:black; height:250px; line-height: 30px; margin-right: 20px; margin-top:20px;}
+
+    @media (min-width:1280px){
+        .themeA_substance { font-size:18px; }
+    }
+    @media (min-width:1160px) and (max-width:1279px){
+        .themeA_substance { font-size:16px; }
+    }
+    @media (max-width:1159px){
+        .themeA_substance { font-size:15px; }
+    }
+}

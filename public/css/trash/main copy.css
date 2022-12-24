@@ -1,0 +1,54 @@
+body {height:100%;overflow-y:auto;-webkit-overflow-scrolling: touch;}
+div#contents {width:100%;}
+
+/*  Mobile */
+@media only screen and (max-width:1023px){
+    div#cont {  display:none; }
+    div#m_cont {  position:relative;width:100%;margin-top:60px; } 
+}
+
+
+/*  PC */
+@media only screen and (min-width:1024px){
+    #cont { 
+        width: 100%;
+        height: 100%;
+    } 
+    #m_cont { display:none; } 
+
+    .noti {width:100%; margin:4% auto; padding:0px 0 30px;}
+    .box1{width:70%; margin:0 auto; text-align: center;}
+    .box1 h2 {font-size:42px; font-weight:bold; letter-spacing:3px; width: 100%; margin-bottom: 5px; text-align: center;}
+    .box1 p {font-size:26px; font-weight:bold; letter-spacing:2px; width: 100%; text-align: center;}
+    .box1 h6 {font-size:18px; letter-spacing:2px; width: 100%; text-align: center;}
+
+    .themedata {width:60%; text-align: center; margin:0 auto; padding:20px;}
+    .themedata .selectArea {display: inline-block; width:70%; margin:0 auto; margin-bottom: 20px;}
+    .themedata .selectArea .datepicker {margin-bottom:10px; vertical-align:middle; max-width:190px; position:relative; display: inline-block; font-family: 'Nanum Square','Open Sans'; text-decoration: none; text-align: center; color: #505050; }
+    .themedata .selectArea .datepicker input { border-color: #1a1a1a; color: #fff; background-color: #1a1a1a; appearance: none; margin:0; border:1px solid; padding: 5px; height: 45px; line-height: 45px; box-sizing: border-box; font-size: 1rem;}
+    .themedata .selectArea .datepicker .ico {position:absolute; top:0; right:0; background:url('/images/main/ico_cal_white.png') center no-repeat; margin-right: 7px; width: 22px; text-align: center; line-height: inherit; display: inline-block; height: 100%; min-height: 22px;  color:#505050; }
+
+    .theme1 {float:left; width: 33.3%; padding:1%; margin-bottom:10px;}
+    .theme1 .img {display: block;}
+    .theme1 .img img {width: 100%;}
+    .theme1 .themebtn {padding-left:4px; padding-right: 9px;}
+    .theme1 .themebtn .to1 {margin:5px auto; width:100%; padding:10px; background:#5db335; color:#fff; font-size:15px; text-align:center; border:1px solid #fff; font-weight:bold;} 
+    .theme1 .themebtn .to1:hover {background:#fff; color:#222; border:1px solid #f6f6f6; cursor:pointer; } 
+    div.expand {
+        margin:0px auto;
+        display: block;
+        position:absolute;
+        z-index:100;
+        width:92%;
+        height:100%;
+        text-align:center;
+        color: #fff;
+        font-size:17px;
+        left: 0;
+        right: 0;
+        top:25%;
+        margin: -30px auto 0 auto;
+    }
+
+    
+}

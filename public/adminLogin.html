@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko" class="bg-black">
+    <head>
+        <meta charset="utf-8">
+        <title>인사이드 관리자</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+        <link href="/assets/css/bootstrap-3.3.1.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/sh.css" rel="stylesheet" type="text/css" />
+
+		<script src="/assets/js/jquery-2.1.3.min.js"></script>
+		<script src="/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="/assets/js/bootstrap-3.3.1.min.js" type="text/javascript"></script>
+
+        <!--[if lt IE 9]>
+          <script src="/assets/js/html5shiv-3.7.0.js"></script>
+          <script src="/assets/js/respond-1.3.0.min.js"></script>
+        <![endif]-->
+
+		<script src="/assets/js/jquery.form.min.js"></script>
+		<script src="/assets/js/jquery.validate.js"></script>
+		<script src="/assets/js/jquery.ba-dotimeout.js"></script>
+    </head>
+    <body class="bg-black">
+
+        <div class="form-box" id="login-box">
+            <div class="header" style="background:#F8B829;">Inside Admin</div>
+            
+			<form name="loginFrm" id="loginFrm" class="form-signin" method="post">
+                <div class="body bg-gray">
+                    <div class="form-group">
+                        <input type="text" name="id" id="id_login" autocomplete="off" class="form-control" required placeholder="아이디"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="pass" id="id_pass" autocomplete="off"  class="form-control" required placeholder="비밀번호"/>
+                    </div>
+                </div>
+                <div class="footer">
+                    <button type="submit" class="btn btn-block" style="background:#F8B829;color:#000; font-weight: bold;">로그인</button>
+                </div>
+            </form>
+
+			<div class="margin text-center yn-copyright">
+                <span>COPYRIGHT(C)2021, INSIDE ROOM ALL RIGHTS RESERVED</span>
+            </div>
+        </div>
+
+    </body>
+</html>

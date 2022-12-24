@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>인사이드 방탈출카페 Inside Room</title>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> -->
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<!-- <meta name="naver-site-verification" content="a4c7c0b74939e544079a2e543653493a4628754a"/> -->
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/js/jquery-1.7.1.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/css/import.css" />
+	<link rel="stylesheet" type="text/css" href="/css/search.css" />
+
+	<script type="text/javascript" src="/js/include.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="/js/slick.min.js"></script>
+	<script type="text/javascript" src="/js/ScrollTrigger.min.js"></script>
+	<script type="text/javascript" src="/js/modernizr.js"></script>
+
+	<style>
+		div#header div#wrap2 {
+			display: none;
+		}
+
+		div#m_header div#m_wrap2 {
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			if (Modernizr.touch) {
+				// handle the adding of hover class when clicked
+				$(".img").click(function (e) {
+					if (!$(this).hasClass("hover")) {
+						$(this).addClass("hover");
+					}else{
+						$(this).removeClass("hover");
+					}
+				});
+			} else {
+				// handle the mouseenter functionality
+				$(".img").mouseenter(function () {
+					$(this).addClass("hover");
+				})
+					// handle the mouseleave functionality
+					.mouseleave(function () {
+						$(this).removeClass("hover");
+					});
+			}
+
+			$("#screen_black").css({ 'top': '59px', 'height': $(document).height() - 59 });
+			$("#m_header ul.menu").hide();
+			$("#m_header .m_menu").click(function () {
+				alert("AA");
+				$("ul.menu").show();
+			});
+			$("ul.menu li a.close").click(function () {
+				$("ul.menu").hide();
+			});
+			$(".h_cont ul.sub").hide();
+			$(".h_cont ul.menu li").click(function () {
+				$("ul", this).slideToggle("fast");
+			});
+			$(".personal").hide();
+			$(".div_agree_view").click(function(){
+				$(".personal").show();
+			});
+			$(".person_exit").click(function(){
+				$(".personal").hide();
+			});
+
+			var han_contpom = $("#m_header").offset();
+			$(window).scroll(function () {
+				if ($(document).scrollTop() > han_contpom.top) {
+					$("#m_header").css("position", "fixed");
+					$("#m_header").css("top", "0");
+					$("#m_header").css("z-index", "999");
+					$("#m_wrap1").hide();
+					$("#m_wrap2").show();
+				} else {
+					// $("#m_header").css("position","fixed"); 
+					//$("#m_header").css("top","0");
+					$("#m_wrap1").show();
+					$("#m_wrap2").hide();
+				}
+			});
+		});
+		$(function () {
+			var han_contpos = $("#header").offset().top;
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > han_contpos) {
+					$("#header").css("position", "fixed");
+					$("#header").css("top", "0");
+					$("#wrap1").hide();
+					$("#wrap2").show();
+				} else {
+					$("#header").css("top", "0");
+					$("#wrap1").show();
+					$("#wrap2").hide();
+				}
+			});
+		});
+		function pop_center(url, w, h, tb, st, di, mb, sb, re) {
+			var position = "width=" + w + ",height=" + h + ",left=" + ((screen.width - w) / 2) + ",top=" + ((screen.height - h) / 2) + ",toolbar=" + tb + ",directories=" + di + ",status=" + st + ",menubar=" + mb + ",scrollbars=" + sb + ",resizable=" + re + "";
+			window.open(url, '', position);
+		}
+
+		function start(num) {
+			if (num == 1) {
+				document.getElementById("popup").style.display = "block";
+			}
+			else if (num == 2) {
+				document.getElementById("popup").style.display = "none";
+			}
+		}
+
+		function res_submit(){
+			var param = {};
+			param.theme = 6;
+			param.time = '12:10';
+			param.name = '가오수';
+			param.phone = '010-0000-0000';
+			param.person = 2;
+			console.log(param);
+			$.post('/insideReserveItemAdd', param, function(data){
+				if(data.state == 1){alert('1');}
+				else if(data.state == 2){alert('2');}
+				else if(data.state == 3){alert('3');}
+				console.log(data);
+			});
+
+			// $.get({
+			// 	url: "/insideReserveItemAdd",
+			// 	data : {
+			// 		theme : 6,
+			// 		time : '12:10',
+			// 		name : '가오수',
+			// 		phone : '010-0000-0000',
+			// 		person : 2
+			// 	},
+			// 	success : function(data){console.log(data)},
+			// 	error : function(xhr, status, error){console.log(status + ', '+error)}
+			// });
+		};
+	</script>
+</head>
+
+<body>
+	<div id="header">
+		<div id="wrap1">
+			<div class="h_cont1">
+				<h1><a href="/"><img src="/images/common/logo_han.png" class="logo" alt="로고" /></a></h1>
+				<ul class="nav">
+					<li><a href="/location">오시는길</a></li>
+					<li><a href="/confirm">예약확인&#47;취소</a></li>
+					<li><a href="/reserve">예약하기</a></li>
+					<li><a href="/">테마소개</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div style="clear: both"></div>
+		<div id="wrap2">
+			<div class="h_cont2">
+				<h1><a href="/"><img src="/images/common/logo_han.png" class="logo" alt="로고" /></a></h1>
+				<ul class="nav">
+					<li><a href="/location">오시는길</a></li>
+					<li><a href="/confirm">예약확인&#47;취소</a></li>
+					<li><a href="/reserve">예약하기</a></li>
+					<li><a href="/">테마소개</a></li>
+				</ul>
+			</div>
+		</div>
+		<div style="clear: both"></div>
+	</div>
+	<!--// h_cont1 -->
+	<div style="clear: both"></div>
+
+	<div id="m_header">
+		<div id="m_wrap1">
+			<a href="/"><img src="/images/common/logo_han.png" class="logo" alt="로고" /></a>
+			<a href="#/" class="to_nav"><img src="/images/common/menu_w.png" style="width:30px" alt="메뉴" /></a>
+			<div id="nav_wrap">
+				<ul class="nav">
+					<li><a href="/">테마소개</a></li>
+					<li><a href="/reserve">예약하기</a></li>
+					<li><a href="/confirm">예약확인&#47;취소</a></li>
+					<li><a href="/location">오시는길</a></li>
+					<div style="clear: both"></div>
+				</ul>
+			</div>
+		</div>
+
+		<div style="clear: both"></div>
+
+		<div id="m_wrap2">
+			<a href="/"><img src="/images/common/logo_han.png" class="logo" alt="로고" /></a>
+			<a href="#/" class="to_nav"><img src="/images/common/menu_w.png" style="width:30px" alt="메뉴" /></a>
+			<div id="nav_wrap">
+				<ul class="nav">
+					<li><a href="/">테마소개</a></li>
+					<li><a href="/reserve">예약하기</a></li>
+					<li><a href="/confirm">예약확인&#47;취소</a></li>
+					<li><a href="/location">오시는길</a></li>
+					<div style="clear: both"></div>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="screen_black"></div>
+	<script>
+		window.counter = function () {
+			// this refers to the html element with the data-scroll-showCallback tag
+			var span = this.querySelector('span');
+			var current = parseInt(span.textContent);
+
+			span.textContent = current + 1;
+		};
+
+		document.addEventListener('DOMContentLoaded', function () {
+			var trigger = new ScrollTrigger({
+				addHeight: true
+			});
+		});
+	</script>
+
+	<div id="contents">
+		<div class="box1">
+			<h2>예약확인/취소</h2>
+			<div class="Lbline"></div><br />
+			<h6>예약확인을 위해 예약했던 정보를 입력하세요.<br />
+			예약취소는 예약확인을 한 후에 가능합니다.<br />
+		</div>
+		<div class="divInput">
+			<form name="formInput">
+				<div class="resInput">
+					<input type="hidden" name="name_branch" value="인사이드 방탈출카페">
+					<table class="tableInput">
+						<tbody>
+							<tr>
+								<th>지점</th>
+								<td>인사이드 방탈출카페</td>
+							</tr>
+							<tr>
+								<th>예약자</th>
+								<td>
+									<input type="text" maxlength="10" name="name_name" class="input180">
+								</td>
+							</tr>
+							<tr>
+								<th>연락처</th>
+								<td>
+									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" maxlength="3" name="name_phone1" class="input50"
+									onkeydown="this.value=this.value.replace(/[^0-9]/g,'')", onkeyup="this.value=this.value.replace(/[^0-9]/g,'')", onblur="this.value=this.value.replace(/[^0-9]/g,'')" value="010">
+									<span>-</span>
+									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" maxlength="4" name="name_phone2" class="input60"
+									onkeydown="this.value=this.value.replace(/[^0-9]/g,'')", onkeyup="this.value=this.value.replace(/[^0-9]/g,'')", onblur="this.value=this.value.replace(/[^0-9]/g,'')" value="">
+									<span>-</span>
+									<input type="number" pattern="[0-9]*" inputmode="numeric" min="0" maxlength="4" name="name_phone3" class="input60"
+									onkeydown="this.value=this.value.replace(/[^0-9]/g,'')", onkeyup="this.value=this.value.replace(/[^0-9]/g,'')", onblur="this.value=this.value.replace(/[^0-9]/g,'')" value="">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="Lbline"></div><br />
+				<div>
+					<div class="btn_search">
+						<a onclick="res_submit();">
+							<div class='to1'>검색하기</div>
+						</a>
+					</div>
+				</div>
+				<div style="clear: both"></div>
+			</form>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+	<!-- <div id="mask"></div> -->
+	<div id="footer">
+		<div id="wrap">
+			<div class="f_left">
+				<img src="/images/common/logo_w.png" class="logo" alt="로고" /><br />
+				<h1>인사이드 방탈출카페</h1>
+				<div class="Wbline"></div>
+				<br />
+				<h3>
+					대표 김광수 <br />
+					사업자등록번호 121-69-53572<br />
+					사업장주소 경기도 고양시 일산동구 무궁화로 25-3, 3층 302, 303호<br />
+					(장항동, 이레21투빌딩)<br /><br />
+				</h3>
+			</div>
+			<div class="f_right">
+				<ul class="co">
+					<li>
+						<h1>고객센터</h1>
+						<div class="Wbline"></div>
+						<h4>이용 / 예약안내 :  <br />
+							Tel : (031) 915 - 2077 <br />
+							<!-- Mob : 010 - 6386 - 1357 <br /> -->
+						</h4>
+						<h4>운영시간 : <br />
+						(월-금) 12:00 ~ 22:00 <br />
+						(토-일) 11:00 ~ 23:00
+						</h4>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div style="clear: both"></div>
+	</div>
+	<!--// footer -->
+</body>
+
+</html>
