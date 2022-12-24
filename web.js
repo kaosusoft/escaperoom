@@ -625,7 +625,7 @@ function sendKakaoMessage(themeStr, dateStr, time, person, method, phone, name){
 	var corpNum = '1216953572';
 	var templateCode = '021110000060';
 	var snd = '010-6386-1357';
-	var content = '방탈출카페인사이드\n';
+	var content = '방탈출카페 인사이드\n';
 	content += '[예약확인]\n';
 	content += '지점 : 일산점 (031-915-2077)\n';
 	content += '테마 : '+themeStr+'\n';
