@@ -510,7 +510,6 @@ function sqlConnect(){
 	client.query('SELECT 1');
 }
 
-adminSQL();
 function adminSQL(){
 	client.query('select * from myinside', function(error, result, fields){
 		if(error){
