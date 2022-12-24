@@ -63,9 +63,9 @@ if(isServer.isServer()){
 	client = mysql.createConnection({
 		host: '211.47.75.102',
 		port: 3306,
-		user: 'kaosu',
-		password: 'kaosu12345',
-		database: 'dbkaosu'
+		user: 'escapeadmin1',
+		password: 'escape12345',
+		database: 'dbescapeadmin1'
 	});
 	popbill.config({
 		LinkID : 'KAOSU',
