@@ -11,7 +11,7 @@ const {v4: uuidv4} = require('uuid');
 const crypto = require('crypto');
 var popbill = require('popbill');
 var util = require('./util.js');
-var shop = require('./server/shop.js');
+var shop = require('./shop.js');
 var isServer = require('./server/server.js');
 
 // ***** mySQL db setting ***** //
