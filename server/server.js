@@ -1,3 +1,3 @@
 exports.isServer = function(){
-    return true;
+    return false;
 };
