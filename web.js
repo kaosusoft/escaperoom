@@ -61,7 +61,7 @@ app.get('/', function(request, response){
 
 app.post('/moneydata', function(request, response){
 	var data = JSON.parse(request.body.json);
-	console.log(data.shop);
+	console.log(data.shop + "// date : " + data.date + " // hour : "+data.h);
 	response.send({state:1});
 });
 
