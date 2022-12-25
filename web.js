@@ -12,7 +12,7 @@ const crypto = require('crypto');
 var popbill = require('popbill');
 var util = require('./util.js');
 var shop = require('./shop.js');
-var isServer = require('./server/server.js');
+var isServer = require('./server.js');
 
 // ***** mySQL db setting ***** //
 var client;
@@ -61,7 +61,7 @@ app.get('/', function(request, response){
 
 app.post('/moneydata', function(request, response){
 	var data = JSON.parse(request.body.json);
-	console.log(data.shop + "// date : " + data.date + " // hour : "+data.h);
+	console.log(data.shop + "// date : " + data.date + " // hour : "+data.h + " // data : "+data.data.length);
 	response.send({state:1});
 });
 
