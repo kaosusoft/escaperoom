@@ -56,7 +56,7 @@ app.use(express.static(__dirname+'/public'));
 // ******************************************* 홈페이지 ************************************************** //
 
 app.get('/', function(request, response){
-	response.render('main.html');
+	response.send('방탈출카페 매장 정보');
 });
 
 app.post('/moneydata', function(request, response){
