@@ -33,7 +33,7 @@ if(isServer.isServer()){
 }
 
 // ***** local db setting ***** //
-var adapter = new FileSync('shop.json');
+var adapter = new FileSync('./data_ignore/shop.json');
 var db = low(adapter);
 db.defaults({shop:[]}).write();
 
@@ -104,7 +104,7 @@ var server = http.createServer(app);
 
 server.listen(8080, function(){
 	if(isServer.isServer()){
-		console.log('Server Running at http://insideroom.co.kr');
+		console.log('Server Running at http://escaperoom.kr');
 	}else{
 		console.log('Server Running at http://127.0.0.1:8080');
 	}
