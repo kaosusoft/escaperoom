@@ -1,0 +1,22 @@
+{
+  "shop": [
+    {
+      "index": 1,
+      "name": "인사이드 방탈출카페",
+      "id": "inside",
+      "password": "inside123",
+      "encPassword": "29bb3032311ae15b5e98a1651901c232f8cf5d4329a4c22914863f4f3941ed32",
+      "code": "1b0d1i0s2i2",
+      "cookie": ""
+    },
+    {
+      "index": 2,
+      "name": "제로월드 서현직영점",
+      "id": "zerosh",
+      "password": "zero9242",
+      "encPassword": "29bb3032311ae15b5e98a1651901c232f8cf5d4329a4c22914863f4f3941ed32",
+      "code": "6s2d2w1r2z2",
+      "cookie": "b1fbb0c30e4ff0796a90c0ffbb3e5f3ad539219942c24f05be47c8c2fd23eafb"
+    }
+  ]
+}
