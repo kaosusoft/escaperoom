@@ -91,9 +91,12 @@ app.post('/moneydata', async function(request, response){
 					console.log('insert', tempOriginTheme);
 				}
 			});
-		}catch(error){}
+		}catch(error){
+			console.log(error);
+		}
 	}
 	response.send({state:1, memo:getMemo(data.code)});
+	console.log('update success');
 	// console.log(data.data);
 	// console.log(data.shopdata);
 	
