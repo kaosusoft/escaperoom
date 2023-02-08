@@ -74,11 +74,12 @@ app.post('/moneydata', async function(request, response){
 
 	for(var i=0; i<data.data.length; i++){
 		var tempOriginTheme = tempOrigin; if(data.data[i].uid < 10) tempOriginTheme += '0'; tempOriginTheme += data.data[i].uid;
-		console.log(tempOriginTheme);
 		try{
 			await client.query('update money set old=0 where (code=? and date=? and uid=?)', [data.code, data.date, data.data[i].uid], function(e, r, f){
 				if(e){
 					response.send({state:4, memo:""});
+				}else{
+					console.log('update', tempOriginTheme);
 				}
 			});
 			await client.query('insert into money (code, shop, name, date, h, money, submoney, old, uid, theme, useStr, origin) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on duplicate key update money=?, old=1, submoney=?',
@@ -87,7 +88,7 @@ app.post('/moneydata', async function(request, response){
 					console.log(error);
 					response.send({state:3, memo:""});
 				}else{
-					
+					console.log('insert', tempOriginTheme);
 				}
 			});
 		}catch(error){}
