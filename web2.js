@@ -1,8 +1,8 @@
 var express = require('express');
 var requestIP = require('request-ip');
 var http = require('http');
-//var low = require('lowdb');
-//var FileSync = require('lowdb/adapters/FileSync');
+var low = require('lowdb');
+var FileSync = require('lowdb/adapters/FileSync');
 var ejs = require('ejs');
 var mysql = require('mysql');
 var cookieParser = require('cookie-parser');
@@ -653,3 +653,4 @@ function sendKakaoMessage(themeStr, dateStr, time, person, method, phone, name){
 		}
 	);
 }
+
