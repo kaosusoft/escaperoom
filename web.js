@@ -79,7 +79,7 @@ app.post('/moneydata', async function(request, response){
 				if(e){
 					response.send({state:4, memo:""});
 				}else{
-					console.log('update', tempOriginTheme);
+					
 				}
 			});
 			await client.query('insert into money (code, shop, name, date, h, money, submoney, old, uid, theme, useStr, origin) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on duplicate key update money=?, old=1, submoney=?',
@@ -88,7 +88,7 @@ app.post('/moneydata', async function(request, response){
 					console.log(error);
 					response.send({state:3, memo:""});
 				}else{
-					console.log(result);
+					
 				}
 			});
 		}catch(error){
@@ -96,7 +96,6 @@ app.post('/moneydata', async function(request, response){
 		}
 	}
 	response.send({state:1, memo:getMemo(data.code)});
-	console.log('update success');
 	// console.log(data.data);
 	// console.log(data.shopdata);
 	
