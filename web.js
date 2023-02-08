@@ -88,7 +88,7 @@ app.post('/moneydata', async function(request, response){
 					console.log(error);
 					response.send({state:3, memo:""});
 				}else{
-					console.log('insert', tempOriginTheme);
+					console.log(result);
 				}
 			});
 		}catch(error){
