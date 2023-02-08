@@ -74,6 +74,7 @@ app.post('/moneydata', async function(request, response){
 
 	for(var i=0; i<data.data.length; i++){
 		var tempOriginTheme = tempOrigin; if(data.data[i].uid < 10) tempOriginTheme += '0'; tempOriginTheme += data.data[i].uid;
+		console.log(tempOriginTheme);
 		try{
 			await client.query('update money set old=0 where (code=? and date=? and uid=?)', [data.code, data.date, data.data[i].uid], function(e, r, f){
 				if(e){
@@ -193,4 +194,8 @@ function generateHMAC(key, clearString){
 	return hdigest;
 }
 
+// git stash
+// git pull ~~
+// git stash pop
+// git rm 'data_ignore/shop.json'
 // pm2 start web.js --watch --ignore-watch="data_ignore/* .git/*" --no-daemon
