@@ -49,8 +49,15 @@
 			var totalCard = 0;
 			var totalCash = 0;
 			var totalAccount = 0;
+			var totalTeam = 0;
+			var totalPerson = 0;
 			
 			for(var i=0; i<data.length; i++){
+				var tr = $('<tr></tr>');
+				var td1 = $('<td colspan="7"></td>');
+				td1.text(data[i].theme);
+				td1.appendTo(tr);
+				tr.appendTo($('.tb_money'));
 				console.log(data[i].money);
 				for(var j=0; j<data[i].money.length; j++){
 					if($('.h4_shop').text().length == 0){
@@ -63,21 +70,26 @@
 					var td4 = $('<td></td>');
 					var td5 = $('<td></td>');
 					var td6 = $('<td></td>');
+					var td7 = $('<td></td>');
 					totalCard += Number(data[i].money[j].money.card);
 					totalCash += Number(data[i].money[j].money.cash);
 					totalAccount += Number(data[i].money[j].money.account);
-					td1.text(data[i].theme);
-					td2.text(data[i].money[j].timeStr);
-					td3.text(data[i].money[j].money.card);
-					td4.text(data[i].money[j].money.cash);
-					td5.text(data[i].money[j].money.account);
-					td6.text(data[i].money[j].money.totalPrice);
+					totalTeam++;
+					totalPerson += data[i].money[j].person;
+					td1.text(data[i].money[j].name);
+					td2.text(data[i].money[j].person+"명");
+					td3.text(data[i].money[j].timeStr);
+					td4.text(data[i].money[j].money.card);
+					td5.text(data[i].money[j].money.cash);
+					td6.text(data[i].money[j].money.account);
+					td7.text(data[i].money[j].money.totalPrice);
 					td1.appendTo(tr);
 					td2.appendTo(tr);
 					td3.appendTo(tr);
 					td4.appendTo(tr);
 					td5.appendTo(tr);
 					td6.appendTo(tr);
+					td7.appendTo(tr);
 					tr.appendTo($('.tb_money'));
 				}
 			}
@@ -88,17 +100,21 @@
 			var td4 = $('<td></td>');
 			var td5 = $('<td></td>');
 			var td6 = $('<td></td>');
+			var td7 = $('<td></td>');
 			td1.text("전체");
-			td3.text(totalCard);
-			td4.text(totalCash);
-			td5.text(totalAccount);
-			td6.text(totalCard + totalCash + totalAccount);
+			td2.text(totalTeam+'팀');
+			td3.text(totalPerson+'명');
+			td4.text(totalCard);
+			td5.text(totalCash);
+			td6.text(totalAccount);
+			td7.text(totalCard + totalCash + totalAccount);
 			td1.appendTo(tr);
 			td2.appendTo(tr);
 			td3.appendTo(tr);
 			td4.appendTo(tr);
 			td5.appendTo(tr);
 			td6.appendTo(tr);
+			td7.appendTo(tr);
 			tr.appendTo($('.tb_money'));
 		});
 	</script>
@@ -118,12 +134,13 @@
 					<table class="tableInput">
 						<thead>
 							<tr>
-								<td>테마</td>
-								<td>시간</td>
-								<td>카드</td>
-								<td>현금</td>
-								<td>이체</td>
-								<td>총액</td>
+								<th scope="col">이름</th>
+								<th scope="col">인원</th>
+								<th scope="col">시간</th>
+								<th scope="col">카드</th>
+								<th scope="col">현금</th>
+								<th scope="col">이체</th>
+								<th scope="col">총액</th>
 							</tr>
 						</thead>
 						<tbody class="tb_money">
