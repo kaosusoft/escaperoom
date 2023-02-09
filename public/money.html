@@ -58,7 +58,26 @@
 				td1.text(data[i].theme);
 				td1.appendTo(tr);
 				tr.appendTo($('.tb_money'));
-				console.log(data[i].money);
+				if(data[i].money.length == 0){
+					var tr = $('<tr></tr>');
+					var td1 = $('<td></td>');
+					var td2 = $('<td></td>');
+					var td3 = $('<td></td>');
+					var td4 = $('<td></td>');
+					var td5 = $('<td></td>');
+					var td6 = $('<td></td>');
+					var td7 = $('<td></td>');
+					td1.text('-'); td2.text('-'); td3.text('-'); td4.text('-');
+					td5.text('-'); td6.text('-'); td7.text('-');
+					td1.appendTo(tr);
+					td2.appendTo(tr);
+					td3.appendTo(tr);
+					td4.appendTo(tr);
+					td5.appendTo(tr);
+					td6.appendTo(tr);
+					td7.appendTo(tr);
+					tr.appendTo($('.tb_money'));
+				}
 				for(var j=0; j<data[i].money.length; j++){
 					if($('.h4_shop').text().length == 0){
 						$('.h4_shop').text(data[i].name + ' / '+data[i].date);
