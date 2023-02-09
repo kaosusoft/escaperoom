@@ -83,7 +83,7 @@ div#contents {width:100%; padding-top: 120px; background: url('../images/main/bg
     .resInput { width:100%;}
     .resInput .tableInput {width:100%; margin-bottom: 20px;}
     .resInput tr {height:54px;}
-    .resInput th {width:30%; font-size: 20px; border: 1px solid #ccc;}
+    .resInput th {width:10%; font-size: 20px; border: 1px solid #ccc;}
     .resInput td {font-size: 18px; border: 1px solid #ccc;}
     .input180 {width:270px; height: 36px;}
     .input50 {width:60px; height: 36px;}

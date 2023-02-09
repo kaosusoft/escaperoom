@@ -133,6 +133,36 @@ app.get('/', function(request, response){
 	response.send('방탈출카페 매장 정보');
 });
 
+app.get('/money', function(request, response){
+	var todayStr = util.getDateYYYYMMDD();
+	client.query('select * from money where (code=? and date=? and old=1)', ['6s2d2w1r2z2test', todayStr], function(error, result, fields){
+		if(error){
+
+		}else{
+			var data = [];
+			if(result.length > 0){
+				for(var i=0; i<result.length; i++){
+					var obj = {};
+					obj._id = result[i]._id;
+					obj.code = result[i].code;
+					obj.shop = result[i].shop;
+					obj.name = result[i].name;
+					obj.date = result[i].date;
+					obj.h = result[i].h;
+					obj.money = JSON.parse(result[i].money);
+					obj.uid = result[i].uid;
+					obj.theme = result[i].theme;
+					obj.useStr = JSON.parse(result[i].useStr);
+					data.push(obj);
+				}
+				response.render('money.html', {data: data});
+			}else{
+				response.send('데이터가 없습니다.');
+			}
+		}
+	});
+});
+
 var server = http.createServer(app);
 
 server.listen(8080, function(){
@@ -188,6 +218,7 @@ function saveShopData(){
 }
 
 console.log(util.getDateYMDHMS());
+console.log(util.getDateYYYYMMDD());
 initServer();
 
 function generateHMAC(key, clearString){
