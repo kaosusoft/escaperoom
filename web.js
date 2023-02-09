@@ -135,7 +135,7 @@ app.get('/', function(request, response){
 
 app.get('/money', function(request, response){
 	var todayStr = util.getDateYYYYMMDD();
-	client.query('select * from money where (code=? and date=? and old=1)', ['6s2d2w1r2z2test', todayStr], function(error, result, fields){
+	client.query('select * from money where (code=? and date=? and old=1)', ['6s2d2w1r2z2', todayStr], function(error, result, fields){
 		if(error){
 
 		}else{
