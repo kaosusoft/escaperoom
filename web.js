@@ -82,8 +82,8 @@ app.post('/moneydata', async function(request, response){
 					
 				}
 			});
-			await client.query('insert into money (code, shop, name, date, h, money, submoney, old, uid, theme, useStr, origin) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on duplicate key update money=?, old=1, submoney=?',
-			[data.code, tempShopData.index, tempShopData.name, data.date, data.hour, JSON.stringify(data.data[i].data), '', 1, data.data[i].uid, data.data[i].name, JSON.stringify(data.shopdata), tempOriginTheme, JSON.stringify(data.data[i].data), ''], function(error, result, fields){
+			await client.query('insert into money (code, shop, name, date, h, today, money, submoney, old, uid, theme, useStr, origin) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on duplicate key update money=?, old=1, submoney=?',
+			[data.code, tempShopData.index, tempShopData.name, data.date, data.hour, '', JSON.stringify(data.data[i].data), '', 1, data.data[i].uid, data.data[i].name, JSON.stringify(data.shopdata), tempOriginTheme, JSON.stringify(data.data[i].data), ''], function(error, result, fields){
 				if(error){
 					console.log(error);
 					response.send({state:3, memo:""});
