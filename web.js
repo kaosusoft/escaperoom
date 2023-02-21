@@ -82,8 +82,8 @@ app.post('/moneydata', async function(request, response){
 					
 				}
 			});
-			await client.query('insert into money (code, shop, name, date, h, today, money, submoney, old, uid, theme, useStr, origin) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on duplicate key update money=?, old=1, submoney=?',
-			[data.code, tempShopData.index, tempShopData.name, data.date, data.hour, '', JSON.stringify(data.data[i].data), '', 1, data.data[i].uid, data.data[i].name, JSON.stringify(data.shopdata), tempOriginTheme, JSON.stringify(data.data[i].data), ''], function(error, result, fields){
+			await client.query('insert into money (code, shop, name, date, h, today, money, submoney, old, uid, theme, useStr, origin) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on duplicate key update today=?, money=?, old=1, submoney=?',
+			[data.code, tempShopData.index, tempShopData.name, data.date, data.hour, JSON.stringify(data.data[i].today), JSON.stringify(data.data[i].data), '', 1, data.data[i].uid, data.data[i].name, JSON.stringify(data.shopdata), tempOriginTheme, JSON.stringify(data.data[i].today), JSON.stringify(data.data[i].data), ''], function(error, result, fields){
 				if(error){
 					console.log(error);
 					response.send({state:3, memo:""});
@@ -134,8 +134,12 @@ app.get('/', function(request, response){
 });
 
 app.get('/money', function(request, response){
+	var param = request.query.id;
+	var shopCode = '';
+	if(param == undefined) shopCode = '6s2d2w1r2z2';
+	else shopCode = param;
 	var todayStr = util.getDateYYYYMMDD();
-	client.query('select * from money where (code=? and date=? and old=1)', ['6s2d2w1r2z2', todayStr], function(error, result, fields){
+	client.query('select * from money where (code=? and date=? and old=1)', [shopCode, todayStr], function(error, result, fields){
 		if(error){
 
 		}else{
@@ -149,6 +153,7 @@ app.get('/money', function(request, response){
 					obj.name = result[i].name;
 					obj.date = result[i].date;
 					obj.h = result[i].h;
+					obj.today = JSON.parse(result[i].today);
 					obj.money = JSON.parse(result[i].money);
 					obj.uid = result[i].uid;
 					obj.theme = result[i].theme;
