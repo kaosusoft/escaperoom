@@ -95,6 +95,7 @@ app.post('/moneydata', async function(request, response){
 			console.log(error);
 		}
 	}
+	console.log("money update "+tempShopData.name+" - " + data.util.getDateYMDHMS());
 	response.send({state:1, memo:getMemo(data.code)});
 	// console.log(data.data);
 	// console.log(data.shopdata);
@@ -113,7 +114,7 @@ app.post('/shoplogin', function(request, response){
 		if(shopData.shop[i].id == id){
 			if(shopData.shop[i].encPassword == encPass){
 				var cookie = generateHMAC(encKey, util.getDateYMDHMS());
-				console.log('Login Success');
+				console.log('Login Success - '+util.getDateYMDHMS());
 				response.send({state:1, msg:"success", name:shopData.shop[i].name, code:shopData.shop[i].code});
 				return;
 			}else{
