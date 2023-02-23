@@ -95,7 +95,7 @@ app.post('/moneydata', async function(request, response){
 			console.log(error);
 		}
 	}
-	console.log("money update "+tempShopData.name+" - " + data.util.getDateYMDHMS());
+	console.log("money update "+tempShopData.name+" - " + util.getDateYMDHMS());
 	response.send({state:1, memo:getMemo(data.code)});
 	// console.log(data.data);
 	// console.log(data.shopdata);

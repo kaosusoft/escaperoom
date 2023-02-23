@@ -40,10 +40,17 @@
 		}
 	</style>
 	<script type="text/javascript">
+		var mouseX = 0;
+		var mouseY = 0;
+		var canvasWidth = 10;
+		var canvasHeight = 10;
+		var moneyData = undefined;
+
 		$(document).ready(function () {
 			var data = "<%= JSON.stringify(data) %>";
 			data = data.replaceAll('&#34;', '\"');
 			data = JSON.parse(data);
+			moneyData = data;
 			console.log(data);
 
 			var totalCard = 0;
@@ -135,12 +142,119 @@
 			td6.appendTo(tr);
 			td7.appendTo(tr);
 			tr.appendTo($('.tb_money'));
+
+			var canvas = document.getElementById('canvas');
+
+			$(canvas).mousedown(function(e){
+				mouseX = e.pageX - $(this).offset().left;
+				mouseY = e.pageY - $(this).offset().top;
+			});
+
+			onPageLoadComplete();
+			Update();
+			Render();
 		});
+
+		function onPageLoadComplete(){
+			var FPS = 1;
+			setInterval(gameLoop, 1000/FPS);
+		}
+
+		function gameLoop(){
+			Update();
+			Render();			
+		}
+
+		function Update(){
+			const canvas = document.getElementById("canvas");
+			canvasWidth = window.innerWidth*0.9;
+			canvasHeight = canvasWidth*0.4;
+			canvas.setAttribute("width", canvasWidth);
+			canvas.setAttribute("height", canvasHeight);
+		}
+
+		function Render(){
+			var canvas = document.getElementById("canvas");
+			var Context = canvas.getContext("2d");
+
+			var titleFont = Math.floor(canvasHeight / 15);
+			var itemFont = Math.floor(canvasHeight / 24);
+
+			if(moneyData == undefined){
+				Context.fillStyle = "#000000";
+				Context.fillRect(0, 0, canvasWidth, canvasHeight);
+
+				Context.fillStyle = "#ffffff";
+				Context.textAlign = "center";
+				Context.font = "14 Arial";
+				Context.fillText("매장의 영업이 시작되지 않았습니다.", canvasWidth/2, canvasHeight/2);
+				return;
+			}else{
+				Context.fillStyle = "#ffffff";
+				Context.fillRect(0, 0, canvasWidth, canvasHeight);
+
+				Context.fillStyle = "#000000";
+				Context.textAlign = "center";
+				Context.font = titleFont+"px Arial";
+
+				var gapThemeY = (canvasHeight * 0.8) / moneyData.length;
+				var startThemeY = canvasHeight * 0.1 + gapThemeY/2;
+				var boxWidth = canvasWidth * 0.7;
+				var boxItemHeight = gapThemeY * 0.8;
+				var boxX = canvasWidth * 0.2;
+				var firstTime = 0;
+				var lastTime = 0;
+				for(var i=0; i<moneyData.length; i++){
+					Context.fillText(moneyData[i].theme, canvasWidth*0.1, startThemeY + gapThemeY*i);
+					for(var j=0; j<moneyData[i].today.length; j++){
+						var timeNum = timeStrToNum(moneyData[i].today[j].timeStr);
+						if(firstTime == 0) firstTime = timeNum;
+						if(lastTime == 0) lastTime = timeNum;
+						if(firstTime > timeNum) firstTime = timeNum;
+						if(lastTime < timeNum) lastTime = timeNum;
+					}
+				}
+				var gapTime = lastTime - firstTime;
+				var unitWidth = boxWidth / gapTime;
+				var itemWidth = unitWidth * 60;
+
+				Context.font = itemFont+"px Arial";
+				for(var i=0; i<moneyData.length; i++){
+					for(var j=0; j<moneyData[i].today.length; j++){
+						var isReserve = moneyData[i].today[j].isReserve;
+						var timeNum = timeStrToNum(moneyData[i].today[j].timeStr);
+						var pastTime = timeNum - firstTime;
+						var myX = pastTime * unitWidth;
+						if(isReserve == true){
+							Context.fillStyle = "#d9534f";
+						}else{
+							Context.fillStyle = "#5cb85c";
+						}
+						Context.fillRect(boxX + myX, startThemeY + gapThemeY*i - boxItemHeight/2, itemWidth, boxItemHeight);
+
+						Context.fillStyle = "#000000";
+						Context.fillText(moneyData[i].today[j].timeStr, boxX + myX + itemWidth/2, startThemeY + gapThemeY*i);
+					}
+				}
+
+			}
+		}
+
+		function timeStrToNum(str){
+			if(str.length == 5){
+				var h = Number(str.substring(0,2));
+				var m = Number(str.substring(3,5));
+				return h*60+m;
+			}else return 0;
+		}
 	</script>
 </head>
 
 <body>
 	<div id="contents">
+		<canvas id="canvas" width="100%" height="600px" style="margin-bottom: 40px;">
+			Sorry, Your browser doesn't support HTML5 Canvas.
+		</canvas>
 		<div class="box1">
 			<h2>오늘 매출</h2>
 			<div class="Lbline"></div><br />
@@ -149,7 +263,6 @@
 		<div class="divInput">
 			<form name="formInput">
 				<div class="resInput">
-					<input type="hidden" name="name_branch" value="인사이드 방탈출카페">
 					<table class="tableInput">
 						<thead>
 							<tr>
@@ -167,7 +280,6 @@
 						</tbody>
 					</table>
 				</div>
-				<div class="Lbline"></div><br />
 			</form>
 			<div style="clear: both"></div>
 		</div>

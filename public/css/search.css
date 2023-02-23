@@ -1,5 +1,5 @@
 body {height:100%;overflow-y:auto;-webkit-overflow-scrolling: touch;}
-div#contents {width:100%; padding-top: 120px; background: url('../images/main/bg_w.jpg') center repeat-y; padding-bottom: 50px; text-align: center;}
+div#contents {width:100%; padding-top: 20px; background: url('../images/main/bg_w.jpg') center repeat-y; padding-bottom: 50px; text-align: center;}
 
 .input50::-webkit-outer-spin-button, .input50::-webkit-inner-spin-button{-webkit-appearance: none; margin:0;}
 .input60::-webkit-outer-spin-button, .input60::-webkit-inner-spin-button{-webkit-appearance: none; margin:0;}
