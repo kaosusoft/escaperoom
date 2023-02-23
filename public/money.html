@@ -60,13 +60,13 @@
 			var totalPerson = 0;
 			
 			for(var i=0; i<data.length; i++){
-				var tr = $('<tr></tr>');
+				var tr = $('<tr style="height:10px"></tr>');
 				var td1 = $('<td colspan="7"></td>');
 				td1.text(data[i].theme);
 				td1.appendTo(tr);
 				tr.appendTo($('.tb_money'));
 				if(data[i].money.length == 0){
-					var tr = $('<tr></tr>');
+					var tr = $('<tr"></tr>');
 					var td1 = $('<td></td>');
 					var td2 = $('<td></td>');
 					var td3 = $('<td></td>');
@@ -118,6 +118,11 @@
 					td7.appendTo(tr);
 					tr.appendTo($('.tb_money'));
 				}
+				var tr2 = $('<tr style="height:10px"></tr>');
+				var td2 = $('<td colspan="7"></td>');
+				td2.text(" ");
+				td2.appendTo(tr2);
+				tr2.appendTo($('.tb_money'));
 			}
 			var tr = $('<tr></tr>');
 			var td1 = $('<td></td>');
