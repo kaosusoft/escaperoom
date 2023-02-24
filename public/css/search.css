@@ -20,8 +20,8 @@ div#contents {width:100%; padding-top: 20px; background: url('../images/main/bg_
     .resInput { width:100%;}
     .resInput .tableInput {width:100%; margin-bottom: 20px;}
     .resInput tr {height:54px;}
-    .resInput th {width:10%; font-size: 17px; border: 1px solid #ccc;}
-    .resInput td {font-size: 15px; border: 1px solid #ccc;}
+    .resInput th {width:10%; font-size: 14px; border: 1px solid #ccc;}
+    .resInput td {font-size: 12px; border: 1px solid #ccc;}
     .input180 {height: 36px;}
     .input50 {height: 36px;}
     .input60 {height: 36px;}

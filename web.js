@@ -162,9 +162,12 @@ app.get('/money', function(request, response){
 					data.push(obj);
 				}
 				response.render('money.html', {data: data});
+				console.log("money view "+result[0].name+" - " + util.getDateYMDHMS());
 			}else{
 				response.send('데이터가 없습니다.');
+				console.log("money view "+shopCode+" - " + util.getDateYMDHMS());
 			}
+			
 		}
 	});
 });

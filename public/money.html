@@ -42,6 +42,7 @@
 	<script type="text/javascript">
 		var mouseX = 0;
 		var mouseY = 0;
+		var windowWidth = 10;
 		var canvasWidth = 10;
 		var canvasHeight = 10;
 		var moneyData = undefined;
@@ -61,12 +62,12 @@
 			
 			for(var i=0; i<data.length; i++){
 				var tr = $('<tr style="height:10px"></tr>');
-				var td1 = $('<td colspan="7"></td>');
+				var td1 = $('<td colspan="8"></td>');
 				td1.text(data[i].theme);
 				td1.appendTo(tr);
 				tr.appendTo($('.tb_money'));
 				if(data[i].money.length == 0){
-					var tr = $('<tr"></tr>');
+					var tr = $('<tr></tr>');
 					var td1 = $('<td></td>');
 					var td2 = $('<td></td>');
 					var td3 = $('<td></td>');
@@ -74,8 +75,9 @@
 					var td5 = $('<td></td>');
 					var td6 = $('<td></td>');
 					var td7 = $('<td></td>');
-					td1.text('-'); td2.text('-'); td3.text('-'); td4.text('-');
-					td5.text('-'); td6.text('-'); td7.text('-');
+					var td8 = $('<td></td>');
+					td1.text('0'); td2.text('-'); td3.text('-'); td4.text('-');
+					td5.text('-'); td6.text('-'); td7.text('-'); td8.text('-');
 					td1.appendTo(tr);
 					td2.appendTo(tr);
 					td3.appendTo(tr);
@@ -83,6 +85,7 @@
 					td5.appendTo(tr);
 					td6.appendTo(tr);
 					td7.appendTo(tr);
+					td8.appendTo(tr);
 					tr.appendTo($('.tb_money'));
 				}
 				for(var j=0; j<data[i].money.length; j++){
@@ -97,18 +100,20 @@
 					var td5 = $('<td></td>');
 					var td6 = $('<td></td>');
 					var td7 = $('<td></td>');
+					var td8 = $('<td></td>');
 					totalCard += Number(data[i].money[j].money.card);
 					totalCash += Number(data[i].money[j].money.cash);
 					totalAccount += Number(data[i].money[j].money.account);
 					totalTeam++;
 					totalPerson += data[i].money[j].person;
-					td1.text(data[i].money[j].name);
-					td2.text(data[i].money[j].person+"명");
-					td3.text(data[i].money[j].timeStr);
-					td4.text(data[i].money[j].money.card);
-					td5.text(data[i].money[j].money.cash);
-					td6.text(data[i].money[j].money.account);
-					td7.text(data[i].money[j].money.totalPrice);
+					td1.text(j+1);
+					td2.text(data[i].money[j].name);
+					td3.text(data[i].money[j].person+"명");
+					td4.text(data[i].money[j].timeStr);
+					td5.text(moneyStr(data[i].money[j].money.card));
+					td6.text(moneyStr(data[i].money[j].money.cash));
+					td7.text(moneyStr(data[i].money[j].money.account));
+					td8.text(moneyStr(data[i].money[j].money.totalPrice));
 					td1.appendTo(tr);
 					td2.appendTo(tr);
 					td3.appendTo(tr);
@@ -116,36 +121,37 @@
 					td5.appendTo(tr);
 					td6.appendTo(tr);
 					td7.appendTo(tr);
+					td8.appendTo(tr);
 					tr.appendTo($('.tb_money'));
 				}
 				var tr2 = $('<tr style="height:10px"></tr>');
-				var td2 = $('<td colspan="7"></td>');
+				var td2 = $('<td colspan="8"></td>');
 				td2.text(" ");
 				td2.appendTo(tr2);
 				tr2.appendTo($('.tb_money'));
 			}
 			var tr = $('<tr></tr>');
-			var td1 = $('<td></td>');
-			var td2 = $('<td></td>');
+			var td1 = $('<td colspan="2"></td>');
 			var td3 = $('<td></td>');
 			var td4 = $('<td></td>');
 			var td5 = $('<td></td>');
 			var td6 = $('<td></td>');
 			var td7 = $('<td></td>');
+			var td8 = $('<td></td>');
 			td1.text("전체");
-			td2.text(totalTeam+'팀');
-			td3.text(totalPerson+'명');
-			td4.text(totalCard);
-			td5.text(totalCash);
-			td6.text(totalAccount);
-			td7.text(totalCard + totalCash + totalAccount);
+			td3.text(totalTeam+'팀');
+			td4.text(totalPerson+'명');
+			td5.text(moneyStr(totalCard));
+			td6.text(moneyStr(totalCash));
+			td7.text(moneyStr(totalAccount));
+			td8.text(moneyStr(totalCard + totalCash + totalAccount));
 			td1.appendTo(tr);
-			td2.appendTo(tr);
 			td3.appendTo(tr);
 			td4.appendTo(tr);
 			td5.appendTo(tr);
 			td6.appendTo(tr);
 			td7.appendTo(tr);
+			td8.appendTo(tr);
 			tr.appendTo($('.tb_money'));
 
 			var canvas = document.getElementById('canvas');
@@ -172,7 +178,7 @@
 
 		function Update(){
 			const canvas = document.getElementById("canvas");
-			canvasWidth = window.innerWidth*0.9;
+			canvasWidth = window.innerWidth * 0.9;
 			canvasHeight = canvasWidth*0.4;
 			canvas.setAttribute("width", canvasWidth);
 			canvas.setAttribute("height", canvasHeight);
@@ -252,6 +258,26 @@
 				return h*60+m;
 			}else return 0;
 		}
+
+		function moneyStr(m){
+			var str = '';
+			if(m < 1000) return str+m;
+			var k = Math.floor(m/1000);
+			var tempm = m % 1000;
+			if(k >= 1000) {
+				var m = Math.floor(k/1000);
+				str += m; str += ',';
+				var tempk = k % 1000;
+				if(tempk < 100) str += '0';
+				if(tempk < 10) str += '0';
+			}
+			var tempk = k % 1000;
+			str += tempk; str += ',';
+			if(tempm < 100) str += '0';
+			if(tempm < 10) str += '0';
+			str += tempm;
+			return str;
+		}
 	</script>
 </head>
 
@@ -271,6 +297,7 @@
 					<table class="tableInput">
 						<thead>
 							<tr>
+								<th scope="col" style="width:5%">No.</th>
 								<th scope="col">이름</th>
 								<th scope="col">인원</th>
 								<th scope="col">시간</th>
