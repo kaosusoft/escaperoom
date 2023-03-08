@@ -136,11 +136,16 @@ app.get('/', function(request, response){
 
 app.get('/money', function(request, response){
 	var param = request.query.id;
-	var shopCode = '';
+	var sDate = request.query.start;
+	var eDate = request.query.end;
+	var shopCode = ''; var startDate = ''; var endDate = '';
+	var todayStr = util.getDateYYYYMMDD();
 	if(param == undefined) shopCode = '6s2d2w1r2z2';
 	else shopCode = param;
-	var todayStr = util.getDateYYYYMMDD();
-	client.query('select * from money where (code=? and date=? and old=1)', [shopCode, todayStr], function(error, result, fields){
+	if(sDate == undefined || eDate == undefined) {startDate = todayStr; endDate = todayStr;}
+	else { startDate = sDate; endDate = eDate;}
+	
+	client.query('select * from money where (code=? and date>=? and date<=? and old=1)', [shopCode, startDate, endDate], function(error, result, fields){
 		if(error){
 
 		}else{
@@ -154,7 +159,11 @@ app.get('/money', function(request, response){
 					obj.name = result[i].name;
 					obj.date = result[i].date;
 					obj.h = result[i].h;
-					obj.today = JSON.parse(result[i].today);
+					try{
+						obj.today = JSON.parse(result[i].today);
+					}catch(error){
+						console.log('today : '+result[i].today);
+					}
 					obj.money = JSON.parse(result[i].money);
 					obj.uid = result[i].uid;
 					obj.theme = result[i].theme;
@@ -164,7 +173,7 @@ app.get('/money', function(request, response){
 				response.render('money.html', {data: data});
 				console.log("money view "+result[0].name+" - " + util.getDateYMDHMS());
 			}else{
-				response.send('데이터가 없습니다.');
+				response.render('money.html', {data: data});
 				console.log("money view "+shopCode+" - " + util.getDateYMDHMS());
 			}
 			

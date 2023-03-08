@@ -16,6 +16,12 @@ div#contents {width:100%; padding-top: 20px; background: url('../images/main/bg_
     .box1 h2 {font-size:30px; font-weight:bold; letter-spacing:3px; width: 100%; margin-bottom: 5px; text-align: center;}
     .box1 h6 {font-size:14px; line-height: 28px; letter-spacing:2px; width: 100%; text-align: center;}
 
+    .selectArea {display: inline-block; width:70%; margin:50px 0 20px;}
+    .selectArea h5 {display: inline-block; height:100%; margin:0 auto;}
+    .selectArea .datepicker {margin-bottom:10px; vertical-align:middle; max-width:190px; position:relative; display: inline-block; font-family: 'Nanum Square','Open Sans'; text-decoration: none; text-align: center; color: #505050; }
+    .selectArea .datepicker input { border-color: #1a1a1a; color: #fff; background-color: #1a1a1a; appearance: none; margin:0; border:1px solid; padding: 5px 10px; height: 45px; line-height: 45px; box-sizing: border-box; font-size: 1rem;}
+    .selectArea .datepicker .ico {position:absolute; top:0; right:0; background:url('/images/main/ico_cal_white.png') center no-repeat; margin-right: 7px; width: 22px; text-align: center; line-height: inherit; display: inline-block; height: 100%; min-height: 22px;  color:#505050; }
+
     .divInput {display: inline-block; width:80%; margin: 50px 0 30px;}
     .resInput { width:100%;}
     .resInput .tableInput {width:100%; margin-bottom: 20px;}
@@ -78,6 +84,12 @@ div#contents {width:100%; padding-top: 20px; background: url('../images/main/bg_
     .box1 h2 {font-size:42px; font-weight:bold; letter-spacing:3px; width: 100%; margin-bottom: 5px; text-align: center;}
     .box1 p {font-size:26px; font-weight:bold; letter-spacing:2px; width: 100%; text-align: center;}
     .box1 h6 {font-size:18px; line-height: 28px; letter-spacing:2px; width: 100%; text-align: center;}
+
+    .selectArea {display: inline-block; width:70%; margin:50px 0 50px;}
+    .selectArea h5 {display: inline-block; height:100%; margin:0 auto;}
+    .selectArea .datepicker {margin-bottom:10px; vertical-align:middle; max-width:190px; position:relative; display: inline-block; font-family: 'Nanum Square','Open Sans'; text-decoration: none; text-align: center; color: #505050; }
+    .selectArea .datepicker input { border-color: #1a1a1a; color: #fff; background-color: #1a1a1a; appearance: none; margin:0; border:1px solid; padding: 5px 10px; height: 45px; line-height: 45px; box-sizing: border-box; font-size: 1rem;}
+    .selectArea .datepicker .ico {position:absolute; top:0; right:0; background:url('/images/main/ico_cal_white.png') center no-repeat; margin-right: 7px; width: 22px; text-align: center; line-height: inherit; display: inline-block; height: 100%; min-height: 22px;  color:#505050; }
 
     .divInput {display: inline-block; width:60%; margin: 50px 0 30px;}
     .resInput { width:100%;}

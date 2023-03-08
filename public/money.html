@@ -154,6 +154,29 @@
 			td8.appendTo(tr);
 			tr.appendTo($('.tb_money'));
 
+			var pickerDate = $("#res_date").data("date");
+			var today = getDateYYYYMMDD();
+
+			$("#res_date").datepicker({
+				dateFormat: 'yy-mm-dd',
+				minDate: new Date('2023-01-01'),
+				maxDate: 0,
+				changeMonth: true,
+				changeYear: true,
+				nextText: '다음 달',
+				prevText: '이전 달',
+				dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+				dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+				monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+				monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+				
+				onSelect: function(dateText) {
+					var date = dateText;
+					var urlStr = '/money?id=6s2d2w1r2z2&start='+date+'&end='+date;
+					window.location.replace(urlStr);
+				}
+			}).datepicker("setDate", new Date(pickerDate));
+
 			var canvas = document.getElementById('canvas');
 
 			$(canvas).mousedown(function(e){
@@ -278,6 +301,25 @@
 			str += tempm;
 			return str;
 		}
+
+		function checkDate(str){
+			var filter = /^\d{4}-\d{2}-\d{2}$/;
+			return filter.test(str)
+		}
+
+		function getDateYYYYMMDD(){
+			var date = new Date();
+			var dateStr = "";
+
+			dateStr += (date.getFullYear());
+			dateStr += '-';
+			if(date.getMonth()<9){dateStr += '0';}
+			dateStr += (date.getMonth()+1);
+			dateStr += '-';
+			if(date.getDate()<10){dateStr += '0';}
+			dateStr += (date.getDate());
+			return dateStr;
+		}
 	</script>
 </head>
 
@@ -315,6 +357,13 @@
 			</form>
 			<div style="clear: both"></div>
 		</div>
+	</div>
+	<div class="selectArea">
+		<h5>날짜선택</h5>
+		<span class="datepicker date">
+			<input type="text" name="res_date" id="res_date" class="ipt black" autocomplete="off" readonly="" data-date="">
+			<i class="ico left cal_w"></i>
+		</span>
 	</div>
 	<!-- <div id="mask"></div> -->
 	<div id="footer">
